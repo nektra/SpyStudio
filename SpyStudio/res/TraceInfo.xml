@@ -1,0 +1,38 @@
+<trace-info>
+	<hook-type name="RegistryOpenKey" priority="5">
+		<match case="False">key</match>
+	</hook-type>
+	<hook-type name="RegistryCreateKey" priority="5">
+		<match case="False">key</match>
+	</hook-type>
+	<hook-type name="RegistryQueryValue" priority="5">
+		<match case="False">key</match>
+		<match case="False">valueName</match>
+		<match result="True">valueData</match>
+	</hook-type>
+	<hook-type name="RegistrySetValue" priority="5">
+		<match case="False">key</match>
+		<match case="False">valueName</match>
+		<match result="True">valueData</match>
+	</hook-type>
+	<hook-type name="FileOpen" priority="4">
+		<match case="False">filename</match>
+		<match case="False">access</match>
+	</hook-type>
+	<hook-type name="DirectoryCreate" priority="3">
+		<match case="False">filename</match>
+	</hook-type>
+	<hook-type name="DllLoad" priority="4">
+		<match case="False" onlyFilename="True">filename</match>
+	</hook-type>
+	<hook-type name="ComCreate" priority="3">
+		<match case="False">clsid</match>
+	</hook-type>
+	<hook-type name="CreateWindow" priority="2">
+		<match case="True">className</match>
+		<match case="True">wndName</match>
+	</hook-type>
+	<hook-type name="CreateProcess" priority="1">
+		<match case="False">procName</match>
+	</hook-type>
+</trace-info>

@@ -1,0 +1,103 @@
+Protocolo de comunicación asincrónica de SpyStudio:
+--------------------------------------------------
+
+El plugin se encargará de ir llenando buffers de memoria compartida y enviar los handles a los buffers a SpyStudio a través de llamadas a
+INktHookCallInfoPlugin::SendCustomMessage() en forma sincrónica. Cuando el evento INktSpyMgr::OnCustomEvent del SpyStudio se llame,
+duplicará el handle y procesará el buffer asincrónicamente en otro thread.
+
+Cada handler de APIs, tras agregar los datos necesarios al buffer, llamará a INktHookCallInfoPlugin::FilterSpyMgrEvent() para evitar que
+SpyStudio reciba el callback de llamada a una api.
+
+La excepción a la regla anterior es que en la llamada a ntdll.dll!LdrLoadDll se va a hacer un flush del buffer actual y no se va a llamar
+a FilterSpyMgrEvent() para que SpyStudio pueda hookear los entrypoints a COM.
+
+Cada buffer consiste en un string de hasta 2 MB de longitud (si hacemos que los buffers tenga como máximo 2mb) codificado en utf-8 (para
+evitar muchos ceros redundantes en la data) que internamente tienen los distintos mensajes generados.
+
+El caracter '|' se utilizará como delimitador final de un mensaje. Por cada pre y post call que procese el plugin, éste creará un string
+que contendrá toda la data necesaria y la agregará al buffer (Buffer::AddData(LPWSTR szData)). Si la data a anexar ocupa más espacio que
+el disponible en el buffer actual, se agregará lo que entre y el resto a un nuevo buffer. Cuando SpyStudio busque el delimitador de fin
+de mensaje, si no lo encuentra al procesar el buffer actual, esperará a la llegada del siguiente buffer. Supuestamente bloques de 2mb. o
+a lo sumo 4mb deberían alcanzar para alojar al menos un mensaje completo pero esto se evaluará luego. 
+
+Los caracteres '|', '(', ')', ':' y '\' son considerados "reservados". Se deberá anteponer una '\' como caracter de escape. Para embeber
+un caracter NULL se usará '\0'.
+
+El formato de cada mensaje será el siguiente: (Buffer::AddData agregará el delimitador '|')
+ 
+   pid:tid:cookie:timestamp:function:isprecall[:STACK][:RESULTADOS-DE-UNA-FUNCION][:PARAMETROS]
+   
+en donde:
+
+  pid = id del proceso
+  tid = id del thread
+  cookie = valor generado por deviare en cada llamada
+  timestamp = cuando fue llamada la api o se retornó de la misma
+  function = nombre de la función que está siendo llamada
+  isprecall = 1 o 0 indicando si es pre o post call
+  
+  
+STACK:
+~~~~~
+Grupo opcional que incluyen los datos del stack. Se coordinará si los mismos serán enviados en el pre o post call según la api.
+
+cantidad[[:modpath1:modbaseaddr1:addr1:symbol1:offset1][:modpath2:modbaseaddr2:addr2:symbol2:offset2]...]
+
+en donde:
+
+  cantidad = cantidad de subbloques que siguen a continuación
+  modpath# = path al modulo 
+  modbaseaddr# = base del módulo 
+  addr# = dirección 
+  symbol# = símbolo en la dirección addr 
+  offset# = offset desde el símbolo si éste existe o desde la base del módulo
+  
+  
+PARAMETROS:
+~~~~~~~~~~
+Los strings que formen este grupo dependerá de la API que se está llamando pero siempre deberán completarse todos. Por ejemplo, en
+CoCreateInstance si el parámetro "clsid" no puede ser obtenido, se agregará un string vacío como reemplazo.
+
+En caso de necesitar enviar un parámetro que pueda ser NULL, se agregará un prefijo al substring que contiene el valor que consistirá
+en un "1" o un "0". Entonces, si el substring comienza con "0" significará que se pasó NULL como parámetro y si es "1", se tomará el
+valor a partir del 2do caracter como el string enviado.
+
+Dado que SpyStudio solamente usa strings para mostrar los datos, cualquier parámetro no-string será convertido a cadena utilizando
+un formato apropiado para representar GUID, datos binarios, etc. 
+
+Funciones como NtQueryMultipleValues tienen una cantidad variable de parámetros que deben ser enviados a SpyStudio. En estos casos se
+utilizará un formato similar al usado por el grupo STACK en donde el primer substring será la cantidad de elementos enviados y tras el
+mismo, los elementos en sí.
+
+Siguiendo el ejemplo de NtQueryMultipleValues, quedaría algo así: cantidad-entradas[:entryName1:entrytype1:entrydata1][:entryName2
+:entrytype2:entrydata2]...
+
+ 
+RESULTADOS DE UNA FUNCION:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Se tratará del mismo modo que los parámetros. En los PostCalls lo primero que se agregará al string que forma el mensaje, tras la
+cabecera (pid, tid, etc.) será el resultado de la API.
+
+
+======================================================================================================================================
+
+Esquema básico de implementación:
+--------------------------------
+
+Los bufferes serán creados con CreateFileMapping/MapViewOfFile, se irán llenando y enviando sus respectivos handles a través de
+INktHookCallInfoPlugin::SendCustomMessage(). Cuando SendCustomMessage retorna, se harán los CloseHandle correspondientes y crear un
+nuevo búffer. Para esta instancia, como el mensaje enviado es sincrónico, SpyStudio tendrá un duplicado.
+
+Sin embargo hay varios temas que quedarían por resolver:
+
+Performance en multithread: Quizás convenga crear varios buffers en simultáneo y, via hash según el thread-id, acceder agregar la data
+                            al buffer correspondiente.
+Pseudo-starvation: Puede darse el caso de que el buffer no se termine de completar en mucho tiempo, por ende sería conveniente también
+                   que, por ej., cada 10 segundos, así el buffer no esté completo, sea enviado de todas formas.							 
+Deviare shutdown: Habría que ver el modo de enviar los buffers activos cuando el agente se está descargando ya sea por petición de
+                  SpyStudio o por el proceso que está terminando. El timeout del punto anterior minimizaría algunos efectos pero queda
+                  como pendiente.
+
+
+ 
+ 

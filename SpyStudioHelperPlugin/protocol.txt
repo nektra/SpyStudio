@@ -1,0 +1,176 @@
+Protocol:
+  Participants:
+    Client: The process that collects data and sends it to the server.
+    Server: The process that receives data from the client and (ideally) does
+            something useful with it.
+
+  Communication method:
+    A buffer is allocated in shared memory by the client, filled, and sent to
+    the server through Deviare-provided IPC mechanisms. Specifically, "custom
+    messages" with the message code set to a specific value.
+
+  Communication procedure (client side):
+    //Note: A buffer is only properly freed once both the client and the server
+    //      free it.
+    buffer = AllocateBuffer();
+    buffer.optional_mutex = AllocateGlobalMutex();
+    SendCustomMessage(CUSTOM_MESSAGE_SEND_FIRST_BUFFER, buffer);
+    while (1)
+    {
+        data = CollectData();
+        lock (mutex)
+        {
+            if (buffer.MarkedForDeletion() || buffer.IsFull())
+            {
+                FreeBuffer(buffer);
+                buffer = AllocateBuffer();
+                SendCustomMessage(CUSTOM_MESSAGE_SEND_BUFFER, buffer);
+            }
+            buffer.Write(data);
+        }
+    }
+
+  Communication procedure (server side):
+    buffer = ReceiveCustomMessage(CUSTOM_MESSAGE_SEND_FIRST_BUFFER);
+    mutex = buffer.optional_mutex;
+    while (1)
+    {
+        if (WaitAWhileOrUntilAMessage() == THERE_WAS_A_MESSAGE)
+        {
+            new_buffer = ReceiveCustomMessage(CUSTOM_MESSAGE_SEND_BUFFER);
+            ProcessBuffer(buffer);
+            Freebuffer(buffer);
+            buffer = new_buffer;
+        }
+        else
+        {
+            lock (mutex)
+            {
+                ProcessBuffer(buffer);
+                buffer.MarkForDeletion();
+            }
+        }
+    }
+
+  Buffer structure:
+    1. A shared buffer is a fixed-length array of bytes that encode serialized
+       call events. The length of the buffer is agreed-upon at development time
+       by the client and server. It's defined in CoalescentIPC::MAX_BUFFER_SIZE.
+       Only this constant needs to be modified to change the length of
+       transmitted buffers.
+    2. A stream is a series of shared buffers that correspond to the logged data
+       of an application run.
+    3. Serialized call events in a buffer are separated by a pipe ('|'). The
+       first serialized call event in a stream doesn't have a pipe in front of
+       it.
+    4. A serialized call event can cross the boundary of two consecutive
+       buffers.
+    5. Should a buffer be transmitted only partially filled, the last serialized
+       call event will be followed by a pipe and the rest of the buffer will be
+       zeroed.
+    6. The buffer has the following structure:
+        struct Buffer
+        {
+            uint8_t active;
+            uint64_t long_pid; // System PID = long_pid >> 32
+            uint64_t optional_mutex;
+            uint64_t order;
+            uint32_t length;
+            uint32_t event_count;
+            uint8_t data[length];
+        };
+       Multibyte integers are stored in little endian.
+       * active indicates whether the client is allowed to write to it or not.
+         Only the server may write to this byte.
+       * long_pid attempts to uniquely identify a process, taking into account
+         PID reuse.
+       * The first buffer transmitted by a process has optional_mutex set to a
+         HANDLE value to a system-wide mutex owned by the server. Other buffers
+         have this set to zero.
+       * order indicates the order index for the buffer. It's guaranteed that
+         consecutive buffers will be transmitted with consecutive values stored
+         in this integer.
+       * event_count contains the number of events whose tails were written on
+         the corresponding buffer.
+    7. Reserved characters: '\', ':', '|', '(', ')'. Should these characters be
+       needed, they should be escaped in the traditional C manner.
+
+  Call event structure:
+    A serialized call event is a series of UTF-8 strings separated by ':'. Empty
+    strings are allowed. Null strings are encoded as a single byte of value zero
+    in place of the string. This, and item #5 in the previous list are the only
+    cases where null bytes will appear.
+    Non-UTF-8-encoded strings are indicated with a literal '(' (not a literal
+    "\\("), followed by an integer, followed by a literal ')'. The integer
+    indicates the codepage for the string. The server should perform the
+    decoding or leave the byte sequence as-is.
+    A call event has a main header, which is more or less constant, followed by
+    a number of optional sections:
+    <HEADER> [<STACK>] [<RESULT>] [<PARAMS>]
+    Sections are not separated in any special way.
+    
+    Header structure:
+      Hook ID (see note below)
+      Process ID
+      Process Path
+      Thread ID
+      Event cookie
+      Chain depth
+      Timestamp
+      Time offset
+      Elapsed time
+      Function name (e.g. "module.dll!Function")
+      Display name (only for custom hook call events)
+      Event kind
+        Bit 0: "is precall"
+        Bit 1: "was virtualized"
+        Bit 2: "event has no duration"
+    
+    Note on Hook ID: Generated events that weren't generated by Deviare will
+    have the string "null" as Hook ID. In those cases, an ID follows immediately
+    describing the type of event. Each event type will have its own specialized
+    structure.
+    
+    Stack structure:
+      "stack" (this is an identifier to mark the section)
+      Frame count
+      (For each unit of frame count, the following values are added:)
+        Module path (The path to the module that contains the function, may be empty)
+        Module base address (may be empty)
+        Return address
+        Function name
+        Offset ((Return address) subtracted by (Function entry point))
+    
+    Result:
+      "result"
+      Result value
+      (If the function belongs to a custom hook, the following is also added:)
+        CustomValue (see below)
+        Success
+    
+    Params:
+      "params"
+      (The params that are added are unique to each function. See interface.txt.
+      Custom hook calls are handled differently:)
+      (For each parameter:)
+        Parameter name
+        CustomValue (see below)
+    
+    CustomValue:
+      Postprocessing string
+      Raw value
+    
+    Postprocessing strings:
+      Certain data need further processing that can only be, or is more
+      appropriately, done in the server.
+      "" -> use the value verbatim.
+      "HEXINT" -> interpret value as a number and display it in hex based on
+        application settings.
+      "FILENAME" -> value is a file name or path (currently, this does nothing).
+      "BOOLRES" -> value is a BOOL result.
+      "HRESULT" -> value is an HRESULT result.
+      "NTSTATUS" -> value is an NTSTATUS result.
+      "HKEY" -> value is a registry path.
+      "CONTEXT " followed by any string -> Hooks.txt defines what it called
+        "contexts", that determine how values are interpreted (as enum values,
+        as OR'd flags, etc.)

@@ -1,0 +1,60 @@
+﻿Bugs
+* XP OpenFile is not hooked?
+* XP Some registry operations are not hooked (RegCreate, some RegOpen and some RegQuery).
+* Auto-size columns compare
+* Hook FindFirst / FindNext / LoadTypeLib
+* winspool.drv
+* Add Memory functions and OpenProcess (malware)
+* Implement .mui lock using FindResource
+* Implement registry lookup for registry keys. When a clsid is searched first it tries to find it in HKCU then HKLM. 
+Now, we show only one fail when there is an error and we show only the succeeded key when it is found. We should show all the queries. We may
+hook Ntxx functions or implement logic.
+* FindResource: it appears as a read access but when it fails it looks like the file open is failing. It should be another file access.
+* Complement Localization: 
+http://msdn.microsoft.com/en-us/library/windows/desktop/dd319081(v=vs.85).aspx
+* Clipboard
+* IE6: HKEY_CLASSES_ROOT\Interface\{D30C1661-CDAF-11D0-8A3E-00C04FC9E26E}	-> TypeLib -> Version -> it's shown as binary while is REG_SZ
+* Compare: Com tab: when server is different it shows only 1.
+* W7 doesn't get all the registry queries in the CoCreates.
+* Compare: Don't show %system32% as different C:\windows\System32 e.g.
+* Add RegisterWindow and some others
+* BUG: filter CreateWindow on Compare window show no results
+* CoMarshalInterface and may be others
+* Compare -> Find doesn't use last search by default
+* Sometimes the process name is wrong when hooking with Context menu -> Hook
+* LoadTypeLib oleauth
+* ExitProcess and RaiseException
+* CreateRemoteThread is called on XP and the address is wrong.
+* RegQueryMultipleValues
+* Unify errors
+* CreateFileMapping
+* Path in status bar for registry tab (like regedit)
+
+* show item/s in trace
+* Properties for non trace tabs
+** Improve the REG_UNKNOWN when it fails. Put the type that the user asks.
+* Add parameters to execute
+* Registry handling: reduce memory usage and reuse buffers;
+* Export: currently there is a workaround for Wow6432Node keys to export with 32bits paths. It should be done better.
+* Compare logs without caller: this can be done but a new dictionary should be created based on path or other thing instead of caller.
+* Compare: improve results in registry (%systemroot%\system32 == c:\windows\system32, c:\windows\SysWOW64 == c:\windows\system32)
+TreeViewAdv
+* When resizing TreeViewAdv columns the text resizes a bit weird.
+* With ckeck boxes: check / uncheck using space bar -> exception (or kill selection with SpyStudio fix)
+
+Export:
+* Add options to create shortcuts.
+* Add option to set a different Program Files directory.
+
+FIX:
+** Multiple registry replacements
+** BUFFER TOO SMALL / NO MORE ENTRIES not an error
+** Try to match with the same result before. Now a match with different result has the same priority of a match that matches result. This occurs with calls that return results until a NO MORE ENTRIES. We should try to match results too.
+** e.Result == "NO MORE ENTRIES" || add NO MORE FILES
+* Unify SUCCESS (e.g.: REPARSE and SUCCESS)
+* Merge paths in trace
+* Remove last '\' in files
+
+FEATURES:
+* CoCreate: add information about ProxyStub or Server. Complete item with the information collected from registry
+

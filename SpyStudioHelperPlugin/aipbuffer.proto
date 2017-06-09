@@ -1,0 +1,11 @@
+message AipBuffer{
+	required uint32 ServerPid = 1;
+	required uint32 HookFlags = 2;
+	optional uint64 PrimaryHook = 3;
+	optional string Xml = 4;
+	repeated uint32 Offsets32 = 5;
+	optional bytes Buffer32 = 6;
+	repeated uint32 Offsets64 = 7;
+	optional bytes Buffer64 = 8;
+	repeated string SystemModules = 9;
+}

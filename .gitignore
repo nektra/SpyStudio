@@ -1,0 +1,6 @@
+*.VC.db
+*.VC.opendb
+*.csproj.user
+*.vcxproj.user
+bkp/
+SpyStudio/postbuild.ps1

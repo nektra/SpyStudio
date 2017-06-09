@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}</ProjectGuid>
+    <RootNamespace>libpb</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)lib64\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)lib64\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP4 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SDLCheck>false</SDLCheck>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP4 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SDLCheck>false</SDLCheck>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\google\protobuf\any.cc" />
+    <ClCompile Include="..\google\protobuf\arena.cc" />
+    <ClCompile Include="..\google\protobuf\arenastring.cc" />
+    <ClCompile Include="..\google\protobuf\io\strtod.cc" />
+    <ClCompile Include="..\google\protobuf\map_field.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\atomicops_internals_x86_msvc.cc" />
+    <ClCompile Include="..\google\protobuf\io\coded_stream.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\common.cc" />
+    <ClCompile Include="..\google\protobuf\descriptor.cc" />
+    <ClCompile Include="..\google\protobuf\descriptor.pb.cc" />
+    <ClCompile Include="..\google\protobuf\descriptor_database.cc" />
+    <ClCompile Include="..\google\protobuf\dynamic_message.cc" />
+    <ClCompile Include="..\google\protobuf\extension_set.cc" />
+    <ClCompile Include="..\google\protobuf\extension_set_heavy.cc" />
+    <ClCompile Include="..\google\protobuf\generated_message_reflection.cc" />
+    <ClCompile Include="..\google\protobuf\generated_message_util.cc" />
+    <ClCompile Include="..\google\protobuf\message.cc" />
+    <ClCompile Include="..\google\protobuf\message_lite.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\int128.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\once.cc" />
+    <ClCompile Include="..\google\protobuf\reflection_ops.cc" />
+    <ClCompile Include="..\google\protobuf\repeated_field.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\status.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\stringpiece.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\stringprintf.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\structurally_valid.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\strutil.cc" />
+    <ClCompile Include="..\google\protobuf\stubs\substitute.cc" />
+    <ClCompile Include="..\google\protobuf\text_format.cc" />
+    <ClCompile Include="..\google\protobuf\io\tokenizer.cc" />
+    <ClCompile Include="..\google\protobuf\unknown_field_set.cc" />
+    <ClCompile Include="..\google\protobuf\wire_format.cc" />
+    <ClCompile Include="..\google\protobuf\wire_format_lite.cc" />
+    <ClCompile Include="..\google\protobuf\io\zero_copy_stream.cc" />
+    <ClCompile Include="..\google\protobuf\io\zero_copy_stream_impl.cc" />
+    <ClCompile Include="..\google\protobuf\io\zero_copy_stream_impl_lite.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\google\protobuf\any.h" />
+    <ClInclude Include="..\google\protobuf\arena.h" />
+    <ClInclude Include="..\google\protobuf\arenastring.h" />
+    <ClInclude Include="..\google\protobuf\io\coded_stream.h" />
+    <ClInclude Include="..\google\protobuf\io\strtod.h" />
+    <ClInclude Include="..\google\protobuf\map.h" />
+    <ClInclude Include="..\google\protobuf\map_field.h" />
+    <ClInclude Include="..\google\protobuf\stubs\common.h" />
+    <ClInclude Include="..\google\protobuf\descriptor.h" />
+    <ClInclude Include="..\google\protobuf\descriptor.pb.h" />
+    <ClInclude Include="..\google\protobuf\descriptor_database.h" />
+    <ClInclude Include="..\google\protobuf\dynamic_message.h" />
+    <ClInclude Include="..\google\protobuf\extension_set.h" />
+    <ClInclude Include="..\google\protobuf\generated_message_reflection.h" />
+    <ClInclude Include="..\google\protobuf\generated_message_util.h" />
+    <ClInclude Include="..\google\protobuf\message.h" />
+    <ClInclude Include="..\google\protobuf\message_lite.h" />
+    <ClInclude Include="..\google\protobuf\stubs\int128.h" />
+    <ClInclude Include="..\google\protobuf\stubs\once.h" />
+    <ClInclude Include="..\google\protobuf\reflection_ops.h" />
+    <ClInclude Include="..\google\protobuf\repeated_field.h" />
+    <ClInclude Include="..\google\protobuf\stubs\status.h" />
+    <ClInclude Include="..\google\protobuf\stubs\stringpiece.h" />
+    <ClInclude Include="..\google\protobuf\stubs\stringprintf.h" />
+    <ClInclude Include="..\google\protobuf\stubs\strutil.h" />
+    <ClInclude Include="..\google\protobuf\stubs\substitute.h" />
+    <ClInclude Include="..\google\protobuf\text_format.h" />
+    <ClInclude Include="..\google\protobuf\io\tokenizer.h" />
+    <ClInclude Include="..\google\protobuf\unknown_field_set.h" />
+    <ClInclude Include="..\google\protobuf\wire_format.h" />
+    <ClInclude Include="..\google\protobuf\wire_format_lite.h" />
+    <ClInclude Include="..\google\protobuf\io\zero_copy_stream.h" />
+    <ClInclude Include="..\google\protobuf\io\zero_copy_stream_impl.h" />
+    <ClInclude Include="..\google\protobuf\io\zero_copy_stream_impl_lite.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

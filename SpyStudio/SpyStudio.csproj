@@ -1,0 +1,1085 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3EE9632-9511-4E58-8B0D-04E2457158A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpyStudio</RootNamespace>
+    <AssemblyName>SpyStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <SignAssembly>false</SignAssembly>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release and Code Signing|x86' ">
+    <OutputPath>bin\x86\Release and Code Signing\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release and Code Signing|x64' ">
+    <OutputPath>bin\x64\Release and Code Signing\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DeviareLiteInterop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Deviare2\Externals\DeviareInProc\bin\2017\DeviareLiteInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Nektra.Deviare2">
+      <HintPath>..\Deviare2\bin\Nektra.Deviare2.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.88.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\$(PlatformTarget)\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COM\ComCallEventExtensions.cs" />
+    <Compile Include="COM\ComServerInfoMgr.cs" />
+    <Compile Include="COM\Controls\ComObjectInfo.cs" />
+    <Compile Include="COM\Controls\ComObjectListViewItemBase.cs" />
+    <Compile Include="COM\Controls\Compare\CompareComObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="COM\Controls\Compare\CompareComObjectListViewItem.cs" />
+    <Compile Include="ContextMenu\EntryPropertiesDialogContextMenu.cs" />
+    <Compile Include="ContextMenu\TraceEntry.cs" />
+    <Compile Include="ContextMenu\TraceEntryContextMenu.cs" />
+    <Compile Include="ContextMenu\TreeEntryContextMenu.cs" />
+    <Compile Include="ContextMenu\TreeInterpreter.cs" />
+    <Compile Include="Database\EventPeerMatching.cs" />
+    <Compile Include="Database\EventPriorityAnalyzer.cs" />
+    <Compile Include="Dialogs\Compare\EventManager.cs" />
+    <Compile Include="Dialogs\Compare\EventMatchType.cs" />
+    <Compile Include="Dialogs\Compare\FunctionInfo.cs" />
+    <Compile Include="Dialogs\Compare\LCSMatchingStrategy.cs" />
+    <Compile Include="Dialogs\Compare\MatchInfo.cs" />
+    <Compile Include="Dialogs\Compare\ProgressReporter.cs" />
+    <Compile Include="Dialogs\Compare\TraceCompareTreeLoadStrategy.cs" />
+    <Compile Include="Dialogs\ExportWizards\ApplicationListItem.cs" />
+    <Compile Include="Dialogs\ExportWizards\ClickableListItem.cs" />
+    <Compile Include="Dialogs\ExportWizards\ExeSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ExeSelect.Designer.cs">
+      <DependentUpon>ExeSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassExportWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassExportWizard.Designer.cs">
+      <DependentUpon>MassExportWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassProgressPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassProgressPage.Designer.cs">
+      <DependentUpon>MassProgressPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassSettingsPage.Designer.cs">
+      <DependentUpon>MassSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassWelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\MassWelcomePage.Designer.cs">
+      <DependentUpon>MassWelcomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\SWV\SwvExeSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\SWV\SwvFileSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\SWV\SwvRegistrySelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\SWV\SwvPackageSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\TemplateEditor\EditorWelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\TemplateEditor\EditorWelcomePage.Designer.cs">
+      <DependentUpon>EditorWelcomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\TemplateEditor\TemplateEditorSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\TemplateEditor\TemplateEditorSave.designer.cs">
+      <DependentUpon>TemplateEditorSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ThinApp\ThinAppExeSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ThinApp\ThinAppFileSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ThinApp\ThinAppRegistrySelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Export\AppV\AppvExport.cs" />
+    <Compile Include="Export\AppV\AppvExporter.cs" />
+    <Compile Include="Export\AppV\AppvPathNormalizer.cs" />
+    <Compile Include="Export\AppV\AppvRegistryWriter.cs" />
+    <Compile Include="Export\AppV\DarwinDecoder.cs" />
+    <Compile Include="Export\AppV\DarwinPathDecoder.cs" />
+    <Compile Include="Export\AppV\Manifest\AppvApplicationCapabilities.cs" />
+    <Compile Include="Export\AppV\Manifest\AppvAppPath.cs" />
+    <Compile Include="Export\AppV\Manifest\AppvComExtension.cs" />
+    <Compile Include="Export\AppV\Manifest\AppvFileTypeAssociation.cs" />
+    <Compile Include="Export\AppV\Manifest\AppvManifest.cs" />
+    <Compile Include="Export\AppV\Manifest\AppvShortcut.cs" />
+    <Compile Include="Export\AppV\Manifest\AppvURLProtocol.cs" />
+    <Compile Include="Export\AppV\Manifest\AssetIntelligence.cs" />
+    <Compile Include="Export\AppV\Manifest\Fonts.cs" />
+    <Compile Include="Export\AppV\Manifest\Services.cs" />
+    <Compile Include="Export\AppV\Manifest\SoftwareClient.cs" />
+    <Compile Include="Export\MacroBasedNormalizer.cs" />
+    <Compile Include="Export\Templates\ExportTemplateCatalog.cs" />
+    <Compile Include="Export\Templates\IntermediateTreeNode.cs" />
+    <Compile Include="Export\Templates\LastTemplates.cs" />
+    <Compile Include="Export\Templates\TemplateInfo.cs" />
+    <Compile Include="Dialogs\ExportWizards\TemplateListItem.cs" />
+    <Compile Include="Dialogs\ExportWizards\VirtualPackageListItem.cs" />
+    <Compile Include="EventSummary\EventGroup.cs" />
+    <Compile Include="EventSummary\EventGroupMgr.cs" />
+    <Compile Include="EventSummary\EventSummaryCmd.cs" />
+    <Compile Include="EventSummary\EventSummaryMgr.cs" />
+    <Compile Include="Export\EntryPoint.cs" />
+    <Compile Include="Export\GeneralizedPathNormalizer.cs" />
+    <Compile Include="Export\Templates\PortableTemplate.cs" />
+    <Compile Include="Export\SWV\SwvExporter.cs" />
+    <Compile Include="Export\ThinApp\IExportProgressControl.cs" />
+    <Compile Include="Export\ThinApp\IVirtualPackage.cs" />
+    <Compile Include="Export\ThinApp\ThinAppCapture.cs" />
+    <Compile Include="Export\ThinApp\ThinAppExportSettings.cs" />
+    <Compile Include="Export\Exporter.cs" />
+    <Compile Include="Export\ExportSettings.cs" />
+    <Compile Include="Export\MassExports\MassVirtualizationExport.cs" />
+    <Compile Include="Dialogs\ExportWizards\ThinApp\ThinAppCaptureSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\TemplateSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\TemplateSelect.designer.cs">
+      <DependentUpon>TemplateSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ThinApp\ThinAppWelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\ExportSettingsTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\MassExports\ExportSettingsTable.Designer.cs">
+      <DependentUpon>ExportSettingsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectRegistryKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectRegistryKey.Designer.cs">
+      <DependentUpon>SelectRegistryKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TemplatedVirtualizationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventSummary\EventSummaryGraphic.cs" />
+    <Compile Include="EventSummary\EventSummaryGraphic.Designer.cs">
+      <DependentUpon>EventSummaryGraphic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Compare\EventInfo.cs" />
+    <Compile Include="Dialogs\Compare\CompareItemType.cs" />
+    <Compile Include="Dialogs\Compare\SyncPoint.cs" />
+    <Compile Include="Export\AppBehaviourAnalyzer.cs" />
+    <Compile Include="Dialogs\Properties\EntryComparePropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Properties\EntryComparePropertiesDialog.Designer.cs">
+      <DependentUpon>EntryComparePropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Properties\EntryPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Properties\EntryPropertiesDialog.Designer.cs">
+      <DependentUpon>EntryPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Properties\EntryPropertiesDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Properties\EntryPropertiesDialogBase.Designer.cs">
+      <DependentUpon>EntryPropertiesDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\SWV\SwvExportSettings.cs" />
+    <Compile Include="Export\CheckerType.cs" />
+    <Compile Include="Dialogs\ExportWizards\ProgressPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ProgressPage.Designer.cs">
+      <DependentUpon>ProgressPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\FolderMacro.cs" />
+    <Compile Include="Export\ThinApp\ThinAppEntryPointFinder.cs" />
+    <Compile Include="Dialogs\ExportWizards\ThinApp\EntryPointSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ThinApp\EntryPointSelect.Designer.cs">
+      <DependentUpon>EntryPointSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ThinApp\ThinAppExporter.cs" />
+    <Compile Include="Export\RegistryChecker.cs" />
+    <Compile Include="Export\ThinApp\ThinAppRegKeyInfo.cs" />
+    <Compile Include="Extensions\CallEventIdsEnumerableExtensions.cs" />
+    <Compile Include="Extensions\DirectoryInfoExtensions.cs" />
+    <Compile Include="Extensions\HashSetExtensions.cs" />
+    <Compile Include="Extensions\LinkedListExtensions.cs" />
+    <Compile Include="Extensions\LINQExtensions.cs" />
+    <Compile Include="Extensions\RegistryKeyExtensions.cs" />
+    <Compile Include="Extensions\RegistryTreeNodeExtensions.cs" />
+    <Compile Include="Extensions\RegistryValueKindExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\StringListExtensions.cs" />
+    <Compile Include="FileSystem\Compare\CompareFileSystemViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileSystem\Compare\FileSystemListDetails.cs" />
+    <Compile Include="FileSystem\FileSystemTreeChecker.cs" />
+    <Compile Include="Export\ThinApp\ThinAppFileEntry.cs" />
+    <Compile Include="Dialogs\ExportWizards\PackageSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\PackageSelect.Designer.cs">
+      <DependentUpon>PackageSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ThinApp\ThinAppFileCheckingFilter.cs" />
+    <Compile Include="Export\ThinApp\ThinAppOptions.cs" />
+    <Compile Include="Export\ThinApp\ThinAppPathNormalizer.cs" />
+    <Compile Include="Export\ThinApp\ThinAppExport.cs" />
+    <Compile Include="Export\ExportField.cs" />
+    <Compile Include="Export\FieldProxy.cs" />
+    <Compile Include="Export\IFieldContainer.cs" />
+    <Compile Include="Dialogs\ExportWizards\WizardStateFlags.cs" />
+    <Compile Include="Export\ExportFieldNames.cs" />
+    <Compile Include="Dialogs\ExportWizards\SWV\ExportWizardLayerInfo.cs" />
+    <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Export\SWV\SwvPathNormalizer.cs" />
+    <Compile Include="CommandLine\ConsoleModeCmd.cs" />
+    <Compile Include="CommandLine\ConsoleModeMgr.cs" />
+    <Compile Include="CommandLine\NamedPipeClient.cs" />
+    <Compile Include="CommandLine\NamedPipeServer.cs" />
+    <Compile Include="CommandLine\StreamString.cs" />
+    <Compile Include="Database\EventDatabase.cs" />
+    <Compile Include="Dialogs\AboutSpyStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutSpyStudio.Designer.cs">
+      <DependentUpon>AboutSpyStudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Compare\DeviareTraceCompareItem.cs" />
+    <Compile Include="Dialogs\ExecutionProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExecutionProperties.Designer.cs">
+      <DependentUpon>ExecutionProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ExportWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\ExportWizard.Designer.cs">
+      <DependentUpon>ExportWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\FileDestinationSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\FileDestinationSelect.Designer.cs">
+      <DependentUpon>FileDestinationSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\FileSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\FileSelect.Designer.cs">
+      <DependentUpon>FileSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\IsolationRulesSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\IsolationRulesSelect.Designer.cs">
+      <DependentUpon>IsolationRulesSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\PathSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\PathSelect.Designer.cs">
+      <DependentUpon>PathSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\RegistrySelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\RegistrySelect.Designer.cs">
+      <DependentUpon>RegistrySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportWizards\WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\GoToCallByNumberDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\GoToCallByNumberDialog.Designer.cs">
+      <DependentUpon>GoToCallByNumberDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormKey.Designer.cs">
+      <DependentUpon>FormKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormLicense.Designer.cs">
+      <DependentUpon>FormLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormUnregistered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormUnregistered.Designer.cs">
+      <DependentUpon>FormUnregistered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MatchPoint.cs" />
+    <Compile Include="Dialogs\StatsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\StatsReport.Designer.cs">
+      <DependentUpon>StatsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HookSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HookSettings.Designer.cs">
+      <DependentUpon>HookSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InitializingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InitializingForm.designer.cs">
+      <DependentUpon>InitializingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormMonitorGroupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormMonitorGroupManager.Designer.cs">
+      <DependentUpon>FormMonitorGroupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\NodeExtensions.cs" />
+    <Compile Include="FileAssociation\FileAssociationInfo.cs" />
+    <Compile Include="FileAssociation\ProgramIcon.cs" />
+    <Compile Include="FileAssociation\RegistryClasses.cs" />
+    <Compile Include="FileSystem\FileSystemExplorer.cs" />
+    <Compile Include="FileSystem\FileSystemList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileSystem\FileSystemTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileSystem\FileSystemTreeItemSorter.cs" />
+    <Compile Include="Export\ThinApp\ThinAppIsolationOption.cs" />
+    <Compile Include="FileSystem\FileSystemTreeNode.cs" />
+    <Compile Include="FileSystem\NullPathNormalizer.cs" />
+    <Compile Include="FileSystem\PathNormalizer.cs" />
+    <Compile Include="Forms\CallDumpTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\CallDumpTabPage.Designer.cs">
+      <DependentUpon>CallDumpTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COM\Controls\ComObjectListViewItem.cs" />
+    <Compile Include="COM\ClsidRegistryInfo.cs" />
+    <Compile Include="Hooks\Async\AbstractBuffer.cs" />
+    <Compile Include="Hooks\Async\AsyncHookMgr.cs" />
+    <Compile Include="Hooks\Async\BufferHeader.cs" />
+    <Compile Include="Hooks\Async\BufferSink.cs" />
+    <Compile Include="Hooks\Async\DotNetProfilingHandlers.cs" />
+    <Compile Include="Hooks\Async\StreamMerger.cs" />
+    <Compile Include="Hooks\Async\StreamSynchronizationPoint.cs" />
+    <Compile Include="Loader\MiscLogData.cs" />
+    <Compile Include="Loader\Zip.cs" />
+    <Compile Include="Registry\Infos\SerializableRegInfo.cs" />
+    <Compile Include="Swv\SwvIsolationRuleEntry.cs" />
+    <Compile Include="Swv\Registry\SwvLayerRegistry.cs" />
+    <Compile Include="Swv\Registry\SwvLayerRegistryBaseKey.cs" />
+    <Compile Include="Swv\Registry\SwvLayerRegistryKey.cs" />
+    <Compile Include="Swv\Registry\SwvLayerRegistrySubKey.cs" />
+    <Compile Include="Swv\SwvIsolationRuleType.cs" />
+    <Compile Include="Swv\SwvLayer.cs" />
+    <Compile Include="Tools\AllowabilityFunction.cs" />
+    <Compile Include="Tools\CheckFunction.cs" />
+    <Compile Include="Tools\CheckFunctionType.cs" />
+    <Compile Include="Tools\ComExtension.cs" />
+    <Compile Include="Tools\GCTools.cs" />
+    <Compile Include="Hooks\Async\AsyncStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hooks\Async\EventHandlers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hooks\Async\ExceptionHandlers.cs" />
+    <Compile Include="Hooks\Async\FileHandlers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hooks\Async\MiscHandlers.cs" />
+    <Compile Include="Hooks\Async\ProcessState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hooks\Async\AgentInitializationParameters.cs" />
+    <Compile Include="Hooks\Async\RegistryHandlers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hooks\Async\WindowHandlers.cs" />
+    <Compile Include="Hooks\DeviareInitializer.cs" />
+    <Compile Include="Hooks\DllGetClassObjectHook.cs" />
+    <Compile Include="Hooks\OriginalNtCallBuilder.cs" />
+    <Compile Include="Ini\IniFile.cs" />
+    <Compile Include="Main\InterpreterListItem.cs" />
+    <Compile Include="FileSystem\IFileSystemViewerItem.cs" />
+    <Compile Include="FileSystem\IFileSystemViewerControl.cs" />
+    <Compile Include="Main\InterpreterNode.cs" />
+    <Compile Include="Main\RecursiveNodeSearch.cs" />
+    <Compile Include="Registry\Controls\RegistryTreeNodeBase.cs" />
+    <Compile Include="Export\ThinApp\MassThinAppExport.cs" />
+    <Compile Include="Registry\Controls\Compare\CompareRegistryTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registry\Controls\Compare\CompareRegistryTreeNode.cs" />
+    <Compile Include="Registry\Controls\Compare\CompareRegistryValueItem.cs" />
+    <Compile Include="Registry\Infos\IInfo.cs" />
+    <Compile Include="Registry\Infos\RegInfo.cs" />
+    <Compile Include="Registry\Controls\RegistryTreeRootNode.cs" />
+    <Compile Include="Registry\Filters\RegInfoFilter.cs" />
+    <Compile Include="Registry\Filters\RegInfoLinksFilter.cs" />
+    <Compile Include="Registry\Filters\RegInfoMergeLayerPathsFilter.cs" />
+    <Compile Include="Registry\Filters\RegInfoMergeWowFilter.cs" />
+    <Compile Include="Registry\Filters\RegInfoRedirectClassesFilter.cs" />
+    <Compile Include="Registry\Controls\RegistryValueItemBase.cs" />
+    <Compile Include="Registry\Infos\RegValueInfo.cs" />
+    <Compile Include="Registry\Infos\RegKeyInfo.cs" />
+    <Compile Include="Registry\HookTypeExtensions.cs" />
+    <Compile Include="Registry\RegistryKeyAccess.cs" />
+    <Compile Include="Registry\Controls\RegistryTreeNode.cs" />
+    <Compile Include="Registry\Controls\RegistryTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\TraceTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Export\SWV\SwvExport.cs" />
+    <Compile Include="Registry\Controls\RegistryValueItem.cs" />
+    <Compile Include="Tools\AllowabilityResult.cs" />
+    <Compile Include="Tools\CallEventContainerTools.cs" />
+    <Compile Include="Tools\EntryColors.cs" />
+    <Compile Include="Tools\FileEntry.cs" />
+    <Compile Include="Tools\GenericPathDecomposer.cs" />
+    <Compile Include="Tools\GoogleAnalytics\GoogleAnalyticsDotNet.cs" />
+    <Compile Include="Tools\IconCache.cs" />
+    <Compile Include="Tools\LicenseKeyNotFoundException.cs" />
+    <Compile Include="Tools\MultiMap.cs" />
+    <Compile Include="Tools\PendingEventsCountManager.cs" />
+    <Compile Include="Tools\RegKeyNotFoundException.cs" />
+    <Compile Include="Tools\SystemDirectories.cs" />
+    <Compile Include="Tools\Threading.cs" />
+    <Compile Include="Tools\TreeViewAdvNodeChecker.cs" />
+    <Compile Include="Swv\SwvLayers.cs" />
+    <Compile Include="Tools\AssemblyTools.cs" />
+    <Compile Include="Tools\ExceptionContext.cs" />
+    <Compile Include="Tools\IconGetter.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CallDump.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CallDump.Designer.cs">
+      <DependentUpon>CallDump.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionPropertyGrid\FunctionPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GroupManager\FunctionScanner.cs" />
+    <Compile Include="Hooks\DeviareHook.cs" />
+    <Compile Include="Hooks\HookHandlers.cs" />
+    <Compile Include="Hooks\Hooks.cs" />
+    <Compile Include="Hooks\HookState.cs" />
+    <Compile Include="Loader\DeviareLogStore.cs" />
+    <Compile Include="Loader\LogStore.cs" />
+    <Compile Include="Loader\ProcMonLogStore.cs" />
+    <Compile Include="COM\Controls\ComObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\DataInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Compare\DeviareTraceCompareTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EventFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EventFilter.Designer.cs">
+      <DependentUpon>EventFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenu\EntryContextMenu.cs" />
+    <Compile Include="FileSystem\FileSystemViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Compare\FormDeviareCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Compare\FormDeviareCompare.Designer.cs">
+      <DependentUpon>FormDeviareCompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CallDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CallDetails.Designer.cs">
+      <DependentUpon>CallDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenu\Interpreter.cs" />
+    <Compile Include="ContextMenu\EntryVisitor.cs" />
+    <Compile Include="Tools\Extensions.cs" />
+    <Compile Include="Tools\FileSystemTools.cs" />
+    <Compile Include="Tools\ImageTools.cs" />
+    <Compile Include="Tools\ListViewSorted.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\ProcessesTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registry\Controls\RegistryValueList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\NativeApiTools.cs" />
+    <Compile Include="Tools\PlatformTools.cs" />
+    <Compile Include="Tools\ProcessTools.cs" />
+    <Compile Include="Tools\Registry\RegistryTools.cs" />
+    <Compile Include="Tools\Registry\Win32Result.cs" />
+    <Compile Include="Tools\ContextMenuTools.cs" />
+    <Compile Include="Tools\StringHash.cs" />
+    <Compile Include="Tools\SvcHostTools.cs" />
+    <Compile Include="Tools\Tuple.cs" />
+    <Compile Include="Tools\Update.cs" />
+    <Compile Include="Tools\Win32Error2String.cs" />
+    <Compile Include="Trace\ModulePath.cs" />
+    <Compile Include="Trace\MonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trace\MsgInfo.cs" />
+    <Compile Include="Trace\ProcessInfo.cs" />
+    <Compile Include="Dialogs\ProcessProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ProcessProperties.Designer.cs">
+      <DependentUpon>ProcessProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Dialogs\ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialogs\Compare\DeviareTraceCompareTreeView.resx">
+      <DependentUpon>DeviareTraceCompareTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Compare\FormDeviareCompare.resx">
+      <DependentUpon>FormDeviareCompare.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AboutSpyStudio.resx">
+      <DependentUpon>AboutSpyStudio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EventFilter.resx">
+      <DependentUpon>EventFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CallDetails.resx">
+      <DependentUpon>CallDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExecutionProperties.resx">
+      <DependentUpon>ExecutionProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\ExeSelect.resx">
+      <DependentUpon>ExeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\ExportWizard.resx">
+      <DependentUpon>ExportWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\FileDestinationSelect.resx">
+      <DependentUpon>FileDestinationSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\FileSelect.resx">
+      <DependentUpon>FileSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\IsolationRulesSelect.resx">
+      <DependentUpon>IsolationRulesSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\MassExports\MassProgressPage.resx">
+      <DependentUpon>MassProgressPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\MassExports\MassExportWizard.resx">
+      <DependentUpon>MassExportWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\MassExports\MassSettingsPage.resx">
+      <DependentUpon>MassSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\MassExports\MassWelcomePage.resx">
+      <DependentUpon>MassWelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\TemplateEditor\EditorWelcomePage.resx">
+      <DependentUpon>EditorWelcomePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\TemplateEditor\TemplateEditorSave.resx">
+      <DependentUpon>TemplateEditorSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\ThinApp\EntryPointSelect.resx">
+      <DependentUpon>EntryPointSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\PackageSelect.resx">
+      <DependentUpon>PackageSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\PathSelect.resx">
+      <DependentUpon>PathSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\RegistrySelect.resx">
+      <DependentUpon>RegistrySelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\ProgressPage.resx">
+      <DependentUpon>ProgressPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\MassExports\ExportSettingsTable.resx">
+      <DependentUpon>ExportSettingsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\ThinAppStatePage.resx">
+      <DependentUpon>TemplateSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\ThinApp\ThinAppWelcomePage.resx">
+      <DependentUpon>ThinAppWelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportWizards\WelcomePage.resx">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GoToCallByNumberDialog.resx">
+      <DependentUpon>GoToCallByNumberDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormKey.resx">
+      <DependentUpon>FormKey.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormLicense.resx">
+      <DependentUpon>FormLicense.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormMonitorGroupManager.resx">
+      <DependentUpon>FormMonitorGroupManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormUnregistered.resx">
+      <DependentUpon>FormUnregistered.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Properties\EntryComparePropertiesDialog.resx">
+      <DependentUpon>EntryComparePropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Properties\EntryPropertiesDialog.resx">
+      <DependentUpon>EntryPropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Properties\EntryPropertiesDialogBase.resx">
+      <DependentUpon>EntryPropertiesDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectRegistryKey.resx">
+      <DependentUpon>SelectRegistryKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TemplatedVirtualizationPage.resx">
+      <DependentUpon>TemplatedVirtualizationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StatsReport.resx">
+      <DependentUpon>StatsReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HookSettings.resx">
+      <DependentUpon>HookSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InitializingForm.resx">
+      <DependentUpon>InitializingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CallDump.resx">
+      <DependentUpon>CallDump.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ProcessProperties.resx">
+      <DependentUpon>ProcessProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TextSearch.resx">
+      <DependentUpon>TextSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Trace\DeviareRunTrace.cs">
+    </Compile>
+    <Compile Include="FunctionPropertyGrid\CustomObjectType.cs" />
+    <Compile Include="FunctionPropertyGrid\DeviareFunction.cs" />
+    <Compile Include="FunctionPropertyGrid\DeviareParam.cs" />
+    <Compile Include="Tools\QueuedWorkerThread.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Dialogs\TextSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TextSearch.Designer.cs">
+      <DependentUpon>TextSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CallEvent.cs" />
+    <Compile Include="Tools\HooksXml.cs" />
+    <Compile Include="Tools\StringTools.cs" />
+    <Compile Include="Tools\DeviareTools.cs" />
+    <Compile Include="Tools\FormTools.cs" />
+    <Compile Include="Tools\ListViewTools.cs" />
+    <Compile Include="Windows\Controls\Compare\CompareWindowListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Controls\Compare\CompareWindowListViewItem.cs" />
+    <Compile Include="Windows\Controls\WindowInfo.cs" />
+    <Compile Include="Windows\Controls\WindowListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Tools.cs" />
+    <Compile Include="Tools\TreeViewAdvTools.cs" />
+    <Compile Include="Tools\XmlTools.cs" />
+    <Compile Include="Export\VirtualizationExport.cs" />
+    <Compile Include="Dialogs\WizardFactory.cs" />
+    <Compile Include="Windows\Controls\WindowClassNames.cs" />
+    <Compile Include="Windows\Controls\WindowListViewItem.cs" />
+    <Compile Include="Windows\Controls\WindowListViewItemBase.cs" />
+    <Compile Include="Windows\WindowCallEventExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.ico" />
+    <Content Include="Resources\Hooks.txt" />
+    <None Include="Manifests\SpyStudio.embed.manifest" />
+    <None Include="Manifests\SpyStudio.embed64.manifest" />
+    <None Include="Properties\DataSources\SpyStudio.Dialogs.ExportWizards.ThinApp.ThinAppPackage.datasource" />
+    <None Include="Properties\DataSources\SpyStudio.Dialogs.ExportWizards.ThinApp.ThinAppPackageSelect.datasource" />
+    <None Include="res\control_play.png" />
+    <None Include="res\main.ico" />
+    <None Include="res\nektra_logo_77x77.png" />
+    <None Include="res\nektra.png" />
+    <None Include="res\play.png" />
+    <None Include="res\play-no-frame.png" />
+    <None Include="res\arrow_refresh.png" />
+    <None Include="res\arrow_refresh_2.png" />
+    <Content Include="Todo.txt" />
+    <None Include="Resources\TraceInfo.txt" />
+    <None Include="Resources\ProcMon.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Aga.Controls\Aga.Controls.csproj">
+      <Project>{E73BB233-D88B-44A7-A98F-D71EE158381D}</Project>
+      <Name>Aga.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="Wizard.Controls\Wizard.Controls.csproj">
+      <Project>{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}</Project>
+      <Name>Wizard.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="Wizard.UI\Wizard.UI.csproj">
+      <Project>{80614F74-563D-418E-9BF6-1294F73521C0}</Project>
+      <Name>Wizard.UI</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)" == "Release and Code Signing" (
+    powershell Set-ExecutionPolicy remotesigned
+    set SOLUTIONDIR=$(SolutionDir)
+    set PLATFORMNAME=$(PlatformName)
+    set TARGETDIR=$(TargetDir)
+    set CONFIGURATIONNAME=$(ConfigurationName)
+    powershell -File "$(SolutionDir)\postbuild.ps1" "$(SolutionDir) " "$(PlatformName) " "$(TargetDir) " "$(ConfigurationName) "
+    goto :EOF
+)
+
+SET ST=%25ProgramFiles%25\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe
+SET CP=$(SolutionDir)\..\Certificate\nektra-sa.p12
+SET URL=http://timestamp.comodoca.com/authenticode
+SET DV_BIN=$(SolutionDir)\..\Deviare2\bin
+SET DV_INPROC_BIN=$(SolutionDir)\..\Deviare-InProc\bin
+SET HELPER_PLUGIN=$(SolutionDir)\..\SpyStudioHelperPlugin\bin
+
+IF "$(PlatformName)" == "x86" (
+  COPY /Y "%25DV_INPROC_BIN%25\DeviareLiteCOM.dll" "$(TargetDir)"
+  COPY /Y "$(SolutionDir)\Manifests\SpyStudio.embed.manifest" "$(TargetDir)\SpyStudio.exe.manifest"
+)
+IF "$(PlatformName)" == "x64" (
+  COPY /Y "%25DV_BIN%25\DeviareCOM64.dll" "$(TargetDir)"
+  COPY /Y "%25DV_BIN%25\Deviare64.db" "$(TargetDir)"
+  COPY /Y "%25DV_BIN%25\DvAgent64.dll" "$(TargetDir)"
+  COPY /Y "%25DV_INPROC_BIN%25\DeviareLiteCOM64.dll" "$(TargetDir)"
+  COPY /Y "%25HELPER_PLUGIN%25\SpyStudioHelperPlugin64.dll" "$(TargetDir)"
+  COPY /Y "$(SolutionDir)\Manifests\SpyStudio.embed64.manifest" "$(TargetDir)\SpyStudio.exe.manifest"
+)
+COPY /Y "%25DV_BIN%25\DeviareCOM.dll" "$(TargetDir)"
+COPY /Y "%25DV_BIN%25\Deviare32.db" "$(TargetDir)"
+COPY /Y "%25DV_BIN%25\DvAgent.dll" "$(TargetDir)"
+COPY /Y "%25DV_BIN%25\Nektra.Deviare2.dll" "$(TargetDir)"
+COPY /Y "%25DV_INPROC_BIN%25\DeviareLiteInterop.dll" "$(TargetDir)"
+COPY /Y "%25HELPER_PLUGIN%25\SpyStudioHelperPlugin.dll" "$(TargetDir)"
+COPY /y "$(SolutionDir)Dependencies\$(PlatformName)\"  "$(TargetDir)"
+COPY /y "$(SolutionDir)Dependencies\"  "$(TargetDir)"
+</PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

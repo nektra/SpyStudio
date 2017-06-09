@@ -1,0 +1,418 @@
+TODO:
+Use ShowLayerPaths to show registry paths also
+Add option to MergeWow6432NodeValues on compare and normal
+BUG: when executing from startup the number of hooks is less than hooking the 2nd time when the process is running (e.g.: Execute and hook with Com IE9 and then unhook and hook. Compare number of hooks of both).
+ZwQuerySecurityObject
+keinsertqueueapc
+_LdrInitializeThunk
+FIX Properties on Compare
+FIX Properties on Export
+LdrRelocateImage
+LdrRelocateRawImage
+LdrVerifyNtHeaders
+LdrProcessRelocationBlockLongLong
+NtLoadDriver
+NtUnloadDriver
+LdrShutdownThread
+
+
+TODO:
+* DONE: Database Exception: when start hooking after loading a log.
+* Verify why when there are tons of events the UI freezes.
+* Change SortedNodeCollection insert to use binary search.
+* Verify Check
+* Verify Sort by version.
+* Goto trace awful
+* Blinking Properties
+* No results search
+* Search doesn't work all function trace.
+* tab creation and remove BeginUpdate
+
+* Remove block
+* Remove until the end
+* Reset removed blocks
+* Properties all tabs except trace: expand all items shown: compare and normal.
+
+* Exceptions: missing some callbacks (Kixxx)
+* Test LZA extraction.
+
+Failures:
+* Com object not registered
+* .NET library not present
+* Dll not found
+* Registry key not present
+
+v2.9.0
+* Now it's possible export a trace without loading it.
+* FIX: Update process wasn't working fine.
+* FIX: Load filter wasn't working.
+* FIX: Big templates were generating memory exception.
+
+v2.8.7
+* Database performance improved.
+* Refresh performance improved: events are reported async.
+* Insert performance improved.
+* Load log performance improved.
+* Procmon logs conversion performance improved (about 3x).
+* UI insertion performance and response improved: thread added to draw EventSummary control. 
+* Processing events wasn't showing events that were waiting to be processed in UI.
+* FIX: If any control was getting events while the database was shutting down, SpyStudio will hang forever.
+* FIX: SpyStudio was unable to capture Internet Explorer 11.
+* Export: Virtual Applications now can be updated without capturing them again, even when the package wasn't created using SpyStudio.
+* DotNet Capture: SpyStudio can now troubleshoot .NET applications. You can see exceptions, assembly loads, object creation and much more.
+* FIX: Compare memory consumption reduced about 60%.
+* FIX: AutoSizeColumn on Trace Tree only iterates visible nodes making it very fast.
+* Database refactoring: Stack information was moved to another database. Events are not serialized anymore. Performance improved in almost all operations: Load log, AddEvents, RefreshEvents, GetEvents. Refresh doesn't block db thread reducing refresh time to about 50%.
+* Added a column 'Relevance' showing the Priority of the event.
+* TreeViewNode: ParamMain now shows the first and last part of the path if it is too big to show the complete content.
+* Added Priority to Clsid registry keys when they aren't found in any place.
+* Added Priority to Files when they aren't found in any place.
+* Priority colors modified because they were too bright.
+* New Trace relevance bar showing event priority.
+* Virtualization: Update packages even when they were not created by SpyStudio.
+
+v2.8.6
+* Windows 8 / 8.1: Fixed some issues hooking.
+* Events are processed faster now (about 50%) reducing the time it takes to insert events in the UI.
+* FIX: Some times processing event count wasn't reaching zero.
+* Package Creation: FIX NullReferenceException on XP.
+* Compare Traces: File System tab groups events in a different way showing more matches than before.
+* Compare Traces: Windows and COM tabs show mismatches now.
+* ThinApp: some applications packaged with ThinApp were generating a dead lock.
+
+v2.8.5
+* Event Summary: Don't lose your time looking for critical events. SpyStudio provides a vertical scrollbar showing trace summary on the left of Trace tab  (more info: http://whiteboard.nektra.com/spystudio-interpreting-tracing-output).
+* Compare traces has a summary of matches on the left side like text compare products  (more info: http://whiteboard.nektra.com/compare-traces).
+* FIX: Double click on Trace was opening properties dialog even when the click was in an empty area or on the header.
+* Compare trace now respects event generation order.
+* Export wizard now saves user changes.
+* CreateDialog was showing always error.
+* FIX: After clearing events Trace control could have some problems in 'Go To event'.
+* FIX: After clearing events Trace control could show incorrect scrollbar position.
+* FIX: File System tree wasn't showing first level expanded.
+* Added Trial dialog each time the user starts monitoring using NON COMMERCIAL version.
+* License Key can be saved in SpyStudio's directory to automatic register it.
+
+* Fixed: tooltip shows mismatches in compare dialog.
+* Replaced empty strings with "<empty>" for display.
+* Properties: double click or Enter on an event 'GoTo' Trace event.
+* IsGenerated: now they are everywhere.
+* Removed vertical scroll bar from compare trace.
+* Changed ThinApp export wizard "cancel" button text to "stop".
+* FIX: Memory leak after FormDeviareCompare close.
+* FIX: Peer, Parent and Cookie fields in properties dialog.
+* FIX: Double click on item arrow expand or collapse the item but it doesn't open properties dialog now.
+* FIX: bug in Deviare agent that caused several objects to not get cleaned up even during normal hookee termination.
+* FIX: SpyStudio was sometimes losing events on application termination.
+
+* FIX: Export File system and Registry vertical were too big to fit the panel. 
+* FIX: When the TreeViewAdv's scrollbar was visible but the control wasn't visible, it could hide a row of the tree.
+* Export to Swv fixed.
+* About help link added to the Nektra's Wiki.
+
+* FIX: Export to Swv doesn't have the isolation combo.
+* FIX: Export to ThinApp: After changing isolation mode of a folder the row wasn't redrawn.
+* RaiseException is not critical if there is a following ExceptionContinue.
+* FIX: Big amount of pending events after clear.
+
+* FIX: Applications which generates a big amount of events fast were consuming a lot of memory since the events were accumulated and then processed. Now they are processed while generating them.
+* FIX: ThinApped Apps could have some problems with the embedded manifests (e.g.: MS Access).
+* FIX: Failed events weren't appearing in File System.
+
+* FIX: Export wizard F2 now let the user rename packages and Ctrl+N create a new package
+* FIX: Apps were not closing when hooked.
+* FIX: When loading a log after having another log or tracing something the Trace tab remained empty.
+
+
+v2.8.1
+* Re-write of the RegistryTree add key.
+* Expand Error let you expand all error nodes in the File System and Registry tree.
+* Properties dialog now displays almost instantly even when it displays lots of events and it uses a small amount of memory.
+* Export: Import Key and Import Directory allows the user to add the whole key or directory to the app package.
+* Properties dialog is shown when the user double clicks an item in any tab.
+* Export: removed LoadLibrary files and add all files related to the application.
+* Export: Related AppID's IIDs are added if the App is checked.
+* Export: FIX Runtime add wasn't working.
+* Free version can compare and Export up to 2000 events.
+* FIX: LoadLibrary's stack trace wasn't working on x64 environments.
+* FIX: Find on trace was working only sometimes.
+* FIX: RegistryTree had a path that could cause an exception with an invalid key.
+* FIX: errors loading XML logs.
+* Deadlock: sometimes hooking a process would cause a deadlock.
+* FIX: Crash hooking and then unhooking Services.exe
+
+TODO:
+Export: Add Interfaces and Clsid whose TypeLib is added.
+
+v2.8
+* Improved memory usage to handle very big installations
+* Improved general UI insertion times.
+* Improved 'Find' times on Trace.
+* Improved Navigate forward and backward times.
+* Improved Apply Filter times.
+* Inserted a new mechanism to avoid not enough memory issues while inserting too many events in a short time period. It should be tuned.
+
+* FIX: LoadResource wasn't finding some modules.
+* Properties dialog working in free version.
+* Processing Events on status bar now shows the number of pending events.
+* When Exporting or Saving data SpyStudio will show the user a warning if there are pending events to process.
+
+v2.7.3
+* Asynchronous handlers now available in free version.
+* FIX: LoadResource now is added to the Files tab.
+* FIX: StackFrame string was incorrect when the caller was a system module.
+* FIX: Some modules in FindResource / LoadResource weren't found.
+
+* FIX: ListViewSorted: Double values were not sorting well small amounts.
+* FIX: First level FileSystemTree nodes weren't expanding when they were inside a BeginUpdate.
+* FIX: When a event after was filtered, the event before was removed from the TraceTreeView but the event count wasn't updated.
+* Performance improvements.
+* Improved icon accuracy.
+
+
+* FileSystemTree now expand first folders when created.
+* Properties in Values ListView now works.
+* Improved icon accuracy.
+* Added Show in Files / Registry / Windows / Com context menu item in trace control.
+* Added "os_exe.dll" to system modules
+* FIX: Compare dialog was matching generated events with not generated causing an exception if the user opened Properties dialog.
+* FIX: Compare: Properties dialog on Trace was showing children calls.
+* FIX: Compare: Unmatched Log2's events were inserted at the end under some circumstances.
+* Compare: now it also tries to match events without matching caller.
+* Compare: CreateWindow was setting window name as result while it should be a match parameter.
+* Compare: EventFilter has a new default value which filters nt0_dll.dll to avoid startup information when tracing ThinApped app.
+* FIX: Progress was drawn wrong at the beginning when loading logs to compare.
+* FIX: Compare Registry: some keys had incorrect result in trace 2.
+
+v2.7.2
+* FIX: After pressing apply in a filter, then Ok made loose Compare dialog focus.
+* Performance improvements when applying filters or loading logs.
+* FIX: blank filter would make generate an exception in Compare dialog.
+* FIX: File System icons had black background after loading log.
+* FIX: File System product, company and description was missing.
+* FIX: Stack missing when loading a xml log.
+* FIX: Some Window creation times were incorrect in async.
+
+* FIX: SpyStudio wasn't working when executed from a shared folder.
+
+* FIX: On XP sometimes events are not shown even when processes are hooked.
+* FIX: Load Xml not working.
+
+* Database: Using now Google Protobuf to store CallEvents in the database.
+* CallEvent properties changed to support Protobuf.
+* Database: event filters are indexed now.
+* Icon got in Database instead of UI.
+* FIX: InvalidPath property was wrong sometimes.
+* FIX: Com tab was missing servers.
+
+v2.7.1
+* Export dialog: improved performance.
+* Feature: Added simple and custom mode to chose files and registry keys.
+* FIXES: Export dialog: Corrected some crashes, wrong paths, errors accessing some files, added better automatic algorithm, and a lot more.
+
+v2.7
+* Feature: Ability to harvest applications directly from the operating system without installation media.
+* Feature: Ability to harvest applications executing an installer.
+* Feature: Export log data to VMware ThinApp.
+* Feature: Event database stores CallEvents in Sqlite database saving memory.
+* FIX: Filezilla was crashing using Quick Connect feature. NtSetFileInformation function was generating a exception when used for named pipes.
+
+* FIX: Crash closing hooked application.
+* FIX: Error comparing logs.
+* FIX: Canceling while Saving wasn't working.
+* FIX: Lots of failing RegQueryValue and RegEnumerateKey events were not compared.
+
+* FIX: RegQueryValue Null data was interpreted as empty.
+* FIX: Compare registry values didn't have Type information.
+* FIX: Failed registry values show empty type instead of REG_UNKNOWN.
+* FIX: Asynch RegQueryValue for REG_MULTI_SZ didn't have the ending \0\0, it has only \0. Comparing Asynch and Synch logs didn't match any REG_MULTI_SZ.
+
+* FIX: Some memory leaks.
+* FIX: Remove unused memory after capturing an application.
+* Added general exception handler.
+
+* FIX: ProcMon logs were not loading.
+* FIX: Registry tab in Compare dialog: Registry tab wasn't showing RegEnumerate
+* FIX: Registry tab in Compare dialog: Properties wasn't showing only matched events of the second file.
+
+* FIX: Compare: file system control wasn't showing differences.
+* FIX: Hide QueryAttributes wasn't working.
+ 
+* FIX: Procmon: file Attributes access wasn't implemented.
+* FIX: Trace context menu wasn't disabling Properties item when no item was selected (#823).
+* FIX: When leaving a Properties dialog open and pressing up or down arrow after changing File System mode from tree to flat or the opposite will crash SpyStudio (#952)
+* FIX: Properties in export's file system step was throwing a exception.
+* FIX: Properties dialog: if the properties value list view was sorted and then press the arrows to an item with more than one property SpyStudio was throwing a exception.
+
+* FIX: Compare File properties crash sometimes when any event was type QueryAttributesFile.
+* FIX: After EnterKey function it asked the user to restart SpyStudio even when the key was wrong or the product was registered.
+* FIX: HookType.QueryDirectoryFile parsed in Procmon logs
+* FIX: Some old logs would crash when an COM event lack of Server information.
+
+* FIX: FormatException in ListViewSorted.
+
+v2.6.1
+* FIX: Ole32.CoGetClassObject wasn't added to the Com tab.
+* FIX: Lots of incorrect Registry errors were reported that were fine.
+* FIX: New timeout to debug removed.
+* FIX: Incorrect hook flag flgInvalidateCache set was generating a major performance issue.
+* FIX: Registry values were all RG_UNKNOWN and no data was loaded.
+
+v2.6.0
+* FIX: Compare: missing class redirection. Different queries to different places that are trying to get the same class information should be merged in the same HKEY_CLASSES_ROOT path.
+* FIX: TreeViewAdv AutoSize wasn't working after scrolling
+* FIX: In asynch mode dll's paths was taken in the server instead of the agent.
+
+
+* FIX: Autosize on Compare wasn't working.
+* FIX: Autosize with bold rows was calculating less space.
+* FIX: Crash while tracing Open Dialog on XP.
+
+* FIX: After declining the license the user was able to use the declined license's features.
+* When the user enters a key a message box displays key information.
+* About shows key information.
+
+* Changed icons expand / collapse icons.
+* Removed tree lines.
+* FIX: auto size fixed. It wasn't working at all on the first column with when it's a multi level tree. On the other columns it wasn't verifying if the header title fit in the new size and double clicking on the bottom side of the header was double clicking the first item.
+* FIX: File system tree was showing errors if a folder had errors but then the children were fine.
+* FIX: Auto search wasn't working as expected.
+* FIX: Chrome installer wasn't intercepted.
+* FIX: Crash on Notepad
+
+* License for Commercial version added.
+* FIX: Exception casting BOOL to Int32 in Asynch mode.
+* New version segmentation: Personal, Enterprise and Virtualization.
+* Feature: Merge Wow registry paths.
+* Feature: Merge COM classes registry paths.
+
+* Feature: added Show startup modules and Hide Query attributes options in Compare dialog
+* Feature: Copy and Select All working on Properties dialogs.
+* UI: TreeViewAdv: Headers now look like MS TreeView
+* UI: TreeViewAdv.BorderStyle now is FixedSingle for all controls.
+* UI: Removed FileSystem margin to make UI consistent.
+* UI: Export dialog is not modal now.
+* FIX: Compare Unmatched items were added too fast and some items were unmatched when they should match
+* FIX: ThinApp doesn't show the stack well so Compare dialog didn't match any event. Now it doesn't match caller.
+* FIX: Column in FileSystemList was wrong.
+* FIX: Compare dialog: on trace control rows which background wasn't white were painted wrong.
+* FIX: Compare: some child events were not matching.
+* FIX: Some OpenFile operations were missing.
+* FIX: Attributes access was renamed to ReadAttributes and WriteAttributes added in OpenFile event.
+* FIX: Properties -> Stack was crashing when there wasn't any match.
+* FIX: Expand all differences on a node was expanding all nodes.
+
+* FIX: Check a node in Export dialog was removing the selection.
+* FIX: Pressing Right arrow in a TreeView was adding the + symbol even when the item doesn't have any children.
+* FIX: Check and Uncheck items context menu now working.
+* Feature: Export dialog: Layers refresh pressing F5 and doing Back -> Next.
+* Feature: Export dialog: Next and Back buttons keep previous information.
+* Feature: Export dialog: Create, Rename and delete layers.
+* Feature: Export dialog now let the user select multiple file destinations.
+* Feature: Export dialog now has Copy / Paste operations on the File Destination step.
+* Feature: Export dialog: now the user can create shortcuts and .local files.
+* Feature: Export dialog: Improved progress showing errors in Red.
+* Feature: Export dialog: now the user can edit and add Isolation Rules.
+* Feature: Export dialog: full support for shortcuts.
+* Feature: Export dialog: full support for local files.
+* License: now Trial and Enterprise licenses are supported.
+
+* FIX: Folder icons now are taken from Shell32.
+* Export Dialog: Added Isolation Rules.
+* Export Dialog: Added load and save from template.
+* Export: FileSystemExplorer shows missing files and with differences in major version.
+* Export: Registry is exported from the log instead of using the base keys.
+
+* Export Wizard: Added Load Ldf files.
+* Export Wizard: Search paths setup step.
+* Export Wizard: File Destination looks like Swv Admin.
+* Export Wizard: Progress step only shows errors to speed up exportation.
+* Export Wizard: Keys without child keys weren't exporting even those that had values.
+* Each type of dialog has a different default directory.
+* FIX: Export Wizard Crash in Isolation Rules step.
+
+* Export Wizard: Now downloads .zip files in LDFs.
+* FIX: Export Wizard: was exporting all keys as strings.
+* FIX: Export Wizard: exported paths in strings were escaped twice.
+* Export Wizard: Registry is exported as .reg to improve performance and support REG_NONE values.
+
+* FIX: Export Wizard: clicking next and previous and then loading template would generate a exception.
+* FIX: Export Wizard: It was trying to match files created .
+* FIX: Export Wizard: load ldf was failing for some layers.
+* Aga Controls: New node path that allow the user to select a folder.
+
+* FIX: Export Wizard: Isolation Rules were added n times after going previous and next n times.
+* FIX: Edit Goto was generating an error when the number was too big. Now limited.
+* FIX: Exceptions were peering with incorrect calls. This was causing that the exception were removed and some events appeared in Bold.
+* FIX: When there is an error executing a program it SpyStudio was staying in monitoring state.
+
+* On CreateProcess error it was in running state.
+* Removed file system events of type C:
+* Find on Registry tree wasn't working on values
+* Crash when a window event didn't have after call in Compare mode
+* Added NtDeviceIoControlFile hook
+* File properties were got in different way in Export and capture.
+* QueryDirectory operation wasn't getting file properties if Hide QueryAttributes was set
+* Handle Leak in GetProcessHandle
+
+* Added RegQueryKey to the Registry tree
+
+* Added Asynchronous logic with a menu item.
+* CreateProcessInternalW wasn't hooked on Windows 7 and 8
+
+FIXME
+* Opening a virtual IE6 without urlmon.dll it crashes DvAgent.dll. Without SpyStudio it runs.
+* Opening a virtual IE6 wihout Shell32.dll it crashes and Spystudio also.
+
+TODO:
+
+
+* Export Templates: solve variables specially Wow and x86
+* Export add a dialog to set layer properties: activate on startup, platform, etc.
+* Export use stored data to set registry values. Now export operation get the value data from the base.
+* Modify FileSelect and Registry to use 3 state checkboxes
+* Add Count and Time to Registry
+* Add IPC functions like Pipes sockects, etc.
+* Add device drivers access (IOCtls)
+* Add DCOM and COM+ access.
+
+v2.5.2
+* .. and . in flat list view
+* Tab stop in execute properties
+
+trunk:
+
+- Fixed issue in which registry entries were not be correctly displayed under Windows XP.
+
+v2.4
+
+* FEATURE Added loaded modules to File List even when they are not loaded with LoadLibrary (important to create layers)
+* FIXED window focus issue at startup
+* FIXED QueryDirectoryFile showing (null) for last parameter
+* FIXED SpyStudio cannot be hooked
+* FIXED Save & Open logs 
+* FIXED About showing correct copyright and target version (2.4.0.1)
+* FIXED Swv Export wasnt working.
+* FEATURE Improved Swv export feature. Now it should create layers easier.
+* FEATURE Added Sort By Version in FileSystem tree control to sort by version instead of by name in each folder
+* FEATURE Added NtQueryAttributesFile
+* FIXED Load log
+* FEATURE Change View File System refresh events
+
+v2.4.1
+
+* BUG: Procmon logs wasnt working.
+* BUG: File System and Registry was collapsing when generating data.
+* FEATURE: Incremental search works on FileSystem and Registry
+* Improved performance for those applications generates lots of registry accesses (e.g.: Regedit)
+* BUG: Leak ModulePath
+* FEATURE: Export to .reg
+* FIXED Change view -> FileSystem doesn't change current tab
+* FIXED Compare dialog generating exception on close.
+* Improved File load time (~50%)
+* FEATURE: Added Environment variables function group.
+* FIXED Filter dialog displayed before Form Compare dialog wasn't applying until next Compare operation.
+* FIXED Find wasn't working for not visible items.
+* FIXED Expand all differences wasn't working
+* Added ShowLayerPaths and HideQueryAttributes to View -> File System
+

@@ -1,0 +1,127 @@
+
+NOTE: THIS DOCUMENTATION IS OLD AND NOT TO BE TRUSTED!
+
+
+
+OpenKey ( string trueKeyName, string passedKeyName )
+
+QueryKey(
+         string keyName,
+         int keyInfoClass,
+         ...
+        );
+QueryKey( string keyName,          KEYINFOCLASS_KeyBasicInformation, string keyInfoName                                                                                             )
+QueryKey( string keyName,           KEYINFOCLASS_KeyNodeInformation, string keyInfoClass, string keyInfoName                                                                        )
+QueryKey( string keyName,           KEYINFOCLASS_KeyFullInformation, string keyInfoClass, int keyInfoSubkeys, int keyInfoValues                                                     )
+QueryKey( string keyName,           KEYINFOCLASS_KeyNameInformation, string keyInfoName                                                                                             )
+QueryKey( string keyName,         KEYINFOCLASS_KeyCachedInformation, int keyInfoSubkeys, int keyInfoValues, int keyInfoNameLength                                                   )
+QueryKey( string keyName,          KEYINFOCLASS_KeyFlagsInformation                                                                                                                 )
+QueryKey( string keyName, KEYINFOCLASS_KeyVirtualizationInformation, int VirtualizationCandidate, int VirtualizationEnabled, int VirtualTarget, int VirtualStore, int VirtualSource )
+QueryKey( string keyName,     KEYINFOCLASS_KeyHandleTagsInformation                                                                                                                 )
+QueryKey( string keyName,                                      else                                                                                                                 )
+
+if (result == 0 && internal_data != NULL )
+    QueryValue( string keyName, string valueName, string keyValueInfoData, int keyValueInfoDataType, string keyValueInfoName )
+else
+    QueryValue( string keyName, string valueName, string, int, string )
+
+QueryMultipleValues( string keyName, int entryCount, [(name, type, value)] )
+
+SetValue( string keyName, string valueName, string keyValueInfoData, int keyValueInfoDataType )
+
+DeleteKey( string keyName )
+
+DeleteValue( string keyName, string valueName )
+
+if (is_precall)
+    EnumerateValueKey( string, int, int, string, int, string )
+else if (result == 0)
+    EnumerateValueKey( string keyName, int index, int keyValueInfoClass, string keyValueInfoData, int keyValueInfoDataType, string name )
+else
+    EnumerateValueKey( string keyName, int index, int keyValueInfoClass, string, int, string )
+
+if (result == 0)
+    EnumerateKey( string keyName, int index, int keyInfoClass, ... ) (idem QueryKey)
+else
+    EnumerateKey( string keyName, int index, int keyInfoClass )
+
+RenameKey( string keyName, string finalName )
+
+if (is_precall)
+    CreateFile( string filePath )
+else
+    CreateFile( string filePath, int accessMask, int attributes, int shareMask, int options, int disposition )
+
+if (is_precall)
+    OpenFile( string filePath )
+else
+    OpenFile( string filePath, int accessMask, int shareMask, int options )
+
+DeleteFile( string filePath )
+
+QueryDirectoryFile( string filePath, string wildCard, int fileInfoClass, int restartScan, int entryCount, [(fileName, attributes)] )
+
+QueryAttributesFile( string attributes )
+
+CreateProcessInternal( string path, string cmdline, int pid )
+
+if (is_precall)
+    CreateWindowEx( string className )
+else
+    CreateWindowEx( string wndName, int hInstance, string className )
+
+if (is_precall)
+    CreateDialogIndirect()
+else
+    CreateDialogIndirect( int hInstance, string className )
+
+if (is_precall)
+    FindResource()
+else
+    FindResource( string type, string name, int language, module )
+
+if (is_precall)
+    RaiseException( string codeString, string flags, string faulting_address )
+else
+    RaiseException()
+
+if (is_precall)
+    RaiseHardError( string codeString, int code, int entryCount, [str] )
+else
+    RaiseHardError()
+
+if (is_precall)
+    UnhandledException( string codeString, string flags, string faulting_address )
+else
+    UnhandledException()
+
+CoCreateInstance( string clsid )
+
+if (is_precall)
+    LdrLoadDLL( string user_path, 0 )
+else
+    LdrLoadDLL( string actual_path, int handle )
+
+if (is_precall)
+    CreateService( string service_name, string command_line )
+else
+    CreateService()
+
+if (is_precall)
+    OpenService( string service_name )
+else
+    OpenService()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

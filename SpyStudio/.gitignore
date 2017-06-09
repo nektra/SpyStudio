@@ -1,0 +1,10 @@
+.vs/
+obj/
+bin/
+postbuild.ps1
+Aga.Controls/bin
+Aga.Controls/obj
+Wizard.UI/obj
+Wizard.UI/bin
+Wizard.Controls/bin
+Wizard.Controls/obj

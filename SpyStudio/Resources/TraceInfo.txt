@@ -1,0 +1,1024 @@
+<trace-info>
+	<hook-type function="RegistryOpenKey" priority="5">
+		<match case="False">path</match>
+	</hook-type>
+	<hook-type function="RegistryCreateKey" priority="5">
+		<match case="False">path</match>
+	</hook-type>
+	<hook-type function="RegistryQueryValue" priority="5">
+		<match case="False">path</match>
+		<match result="True">detail</match>
+	</hook-type>
+	<hook-type function="RegistrySetValue" priority="5">
+		<match case="False">path</match>
+		<match result="True">detail</match>
+	</hook-type>
+	<hook-type function="OpenFile" priority="4">
+		<match case="False">path</match>
+		<match case="False">detail</match>
+	</hook-type>
+	<hook-type function="CreateDirectory" priority="3">
+		<match case="False">path</match>
+	</hook-type>
+	<hook-type function="LoadLibrary" priority="5">
+		<match case="False" onlyFilename="True">path</match>
+	</hook-type>
+<!--	<hook-type function="CoCreate" priority="3" color="Blue">-->
+	<hook-type function="CoCreate" priority="3">
+		<match case="False">path</match>
+		<match case="False" result="True" onlyFilename="True">detail</match>
+	</hook-type>
+<!--	<hook-type function="CreateWindow" priority="2" color="BlueViolet">-->
+	<hook-type function="CreateWindow" priority="2">
+		<match case="True">path</match>
+		<match case="True" result="True">detail</match>
+	</hook-type>
+	<hook-type function="CreateProcess" priority="1">
+		<match case="False">path</match>
+	</hook-type>
+	<hook-type function="ShowWindow" priority="4">
+		<match>path</match>
+		<match>detail</match>
+	</hook-type>
+	<hook-type function="SendMessage" priority="4">
+		<match>path</match>
+		<match>detail</match>
+	</hook-type>
+	<hook-type function="PostMessage" priority="4">
+		<match>path</match>
+		<match>detail</match>
+	</hook-type>
+	<hook-type function="PrintDlg" priority="1">
+	</hook-type>
+	<hook-type function="PageSetupDlg" priority="1">
+	</hook-type>
+	<hook-type function="GetOpenFileName" priority="1">
+	</hook-type>
+	<hook-type function="GetSaveFileName" priority="1">
+	</hook-type>
+	<hook-type function="FindText" priority="1">
+	</hook-type>
+	<hook-type function="ReplaceText" priority="1">
+	</hook-type>
+	<hook-type function="ChooseColor" priority="1">
+	</hook-type>
+	<hook-type function="ChooseFont" priority="1">
+	</hook-type>
+	<hook-type function="GetFileTitle" priority="1">
+	</hook-type>
+	<hook-type function="FindResource" priority="3">
+		<match>path</match>
+	</hook-type>
+	<hook-type function="LoadResource" priority="3">
+		<match>path</match>
+	</hook-type>
+<!-- Begin Urlmon.dll -->
+  <hook-type function="AsyncInstallDistributionUnit" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CoGetClassObjectFromURL" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CoInstall" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CoInternetCombineIUri" priority="4" />
+  <hook-type function="CoInternetCombineUrl" priority="4">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CoInternetCombineUrlEx" priority="4">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CoInternetCompareUrl" priority="4">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CoInternetCreateSecurityManager" priority="3" />
+  <hook-type function="CoInternetCreateZoneManager" priority="3" />
+  <hook-type function="CoInternetGetProtocolFlags" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CoInternetGetSecurityUrl" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CoInternetGetSecurityUrlEx" priority="4" />
+  <hook-type function="CoInternetGetSession" priority="4" />
+  <hook-type function="CoInternetIsFeatureEnabled" priority="4" />
+  <hook-type function="CoInternetIsFeatureEnabledForIUri" priority="4" />
+  <hook-type function="CoInternetIsFeatureEnabledForUrl" priority="4">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CoInternetIsFeatureZoneElevationEnabled" priority="4">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CoInternetParseIUri" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CoInternetParseUrl" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CoInternetQueryInfo" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CoInternetSetFeatureEnabled" priority="3" />
+  <hook-type function="CompareSecurityIds" priority="3" />
+  <hook-type function="CompatFlagsFromClsid" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CopyBindInfo" priority="4" />
+  <hook-type function="CopyStgMedium" priority="4" />
+  <hook-type function="CreateAsyncBindCtx" priority="4" />
+  <hook-type function="CreateAsyncBindCtxEx" priority="4" />
+  <hook-type function="CreateFormatEnumerator" priority="4" />
+  <hook-type function="CreateIUriBuilder" priority="5" />
+  <hook-type function="CreateURLMoniker" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CreateURLMonikerEx" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CreateUri" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CreateUriFromMultiByteString" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CreateUriWithFragment" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="DllCanUnloadNow" priority="3" />
+  <hook-type function="DllGetClassObject" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="DllInstall" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FaultInIEFeature" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FindMediaType" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FindMediaTypeClass" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="FindMimeFromData" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="GetClassFileOrMime" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="GetClassURL" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="GetComponentIDFromCLSSPEC" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="GetSoftwareUpdateInfo" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="HlinkGoBack" priority="3" />
+  <hook-type function="HlinkGoForward" priority="3" />
+  <hook-type function="HlinkNavigateMoniker" priority="3" />
+  <hook-type function="HlinkNavigateString" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="HlinkSimpleNavigateToMoniker" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="HlinkSimpleNavigateToString" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="IsAsyncMoniker" priority="3" />
+  <hook-type function="IsLoggingEnabled" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="IsValidURL" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="MkParseDisplayNameEx" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="ObtainUserAgentString" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="RegisterBindStatusCallback" priority="3" />
+  <hook-type function="RegisterFormatEnumerator" priority="3" />
+  <hook-type function="RegisterMediaTypeClass" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="RegisterMediaTypes" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="ReleaseBindInfo" priority="3" />
+  <hook-type function="RevokeBindStatusCallback" priority="3" />
+  <hook-type function="RevokeFormatEnumerator" priority="3" />
+  <hook-type function="SetSoftwareUpdateAdvertisementState" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="URLDownloadToCacheFile" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="URLDownloadToFile" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="URLOpenBlockingStream" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="URLOpenPullStream" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="URLOpenStream" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="UrlMkGetSessionOption" priority="3" />
+  <hook-type function="UrlMkSetSessionOption" priority="3" />
+  <hook-type function="WriteHitLogging" priority="3" />
+<!-- End Urlmon.dll -->
+
+<!-- Begin Shell32.dll -->
+  <hook-type function="AssocCreateForClasses" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="AssocGetDetailsOfPropKey" priority="3" />
+  <hook-type function="CDefFolderMenu_Create" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="CIDLData_CreateFromIDArray" priority="3" />
+  <hook-type function="CommandLineToArgv" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DAD_AutoScroll" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DAD_DragEnterEx" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DAD_DragLeave" priority="5" />
+  <hook-type function="DAD_DragMove" priority="5" />
+  <hook-type function="DAD_SetDragImage" priority="5" />
+  <hook-type function="DAD_ShowDragImage" priority="5" />
+  <hook-type function="DllCanUnloadNow" priority="3" />
+  <hook-type function="DllGetClassObject" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="DllInstall" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DoEnvironmentSubst" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DragAcceptFiles" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DragFinish" priority="5" />
+  <hook-type function="DragQueryFile" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DragQueryPoint" priority="5" />
+  <hook-type function="DriveType" priority="5" />
+  <hook-type function="DuplicateIcon" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="ExtractAssociatedIcon" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="ExtractIcon" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="FindExecutable" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="GetCurrentProcessExplicitAppUserModelID" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="GetFileNameFromBrowse" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="ILAppendID" priority="5" />
+  <hook-type function="ILClone" priority="5" />
+  <hook-type function="ILCloneFirst" priority="5" />
+  <hook-type function="ILCombine" priority="5" />
+  <hook-type function="ILCreateFromPath" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="ILFindChild" priority="5" />
+  <hook-type function="ILFindLastID" priority="5" />
+  <hook-type function="ILFree" priority="5" />
+  <hook-type function="ILGetNext" priority="5" />
+  <hook-type function="ILGetSize" priority="5" />
+  <hook-type function="ILIsEqual" priority="5" />
+  <hook-type function="ILIsParent" priority="5" />
+  <hook-type function="ILLoadFromStreamEx" priority="5" />
+  <hook-type function="ILRemoveLastID" priority="5" />
+  <hook-type function="ILSaveToStream" priority="5" />
+  <hook-type function="InitNetworkAddressControl" priority="3" />
+  <hook-type function="IsLFNDrive" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="IsNetDrive" priority="3" />
+  <hook-type function="IsUserAnAdmin" priority="3" />
+  <hook-type function="OpenRegStream" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="PathCleanupSpec" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="PathGetShortPath" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="PathIsExe" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="PathIsSlow" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="PathMakeUniqueName" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="PathQualify" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="PathResolve" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="PathYetAnotherMakeUniqueName" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="PickIconDlg" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="PifMgr_CloseProperties" priority="3" />
+  <hook-type function="PifMgr_GetProperties" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="PifMgr_OpenProperties" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="PifMgr_SetProperties" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="ReadCabinetState" priority="3" />
+  <hook-type function="RealDriveType" priority="3" />
+  <hook-type function="RestartDialog" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="RestartDialogEx" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHAddDefaultPropertiesByExt" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHAddFromPropSheetExtArray" priority="3" />
+  <hook-type function="SHAddToRecentDocs" priority="3" />
+  <hook-type function="SHAlloc" priority="5" />
+  <hook-type function="SHAppBarMessage" priority="3" />
+  <hook-type function="SHAssocEnumHandlers" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHBindToFolderIDListParent" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHBindToFolderIDListParentEx" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHBindToObject" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHBindToParent" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHBrowseForFolder" priority="3" />
+  <hook-type function="SHCLSIDFromString" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHChangeNotification_Lock" priority="3" />
+  <hook-type function="SHChangeNotification_Unlock" priority="3" />
+  <hook-type function="SHChangeNotify" priority="3" />
+  <hook-type function="SHChangeNotifyDeregister" priority="3" />
+  <hook-type function="SHChangeNotifyRegister" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHChangeNotifyRegisterThread" priority="3" />
+  <hook-type function="SHCloneSpecialIDList" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCoCreateInstance" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHCreateAssociationRegistration" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateDataObject" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateDefaultContextMenu" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateDefaultExtractIcon" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateDefaultPropertiesOp" priority="3" />
+  <hook-type function="SHCreateDirectory" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHCreateFileExtractIcon" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHCreateItemFromIDList" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateItemFromParsingName" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHCreateItemFromRelativeName" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHCreateItemInKnownFolder" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHCreateItemWithParent" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateProcessAsUser" priority="3" />
+  <hook-type function="SHCreatePropSheetExtArray" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateQueryCancelAutoPlayMoniker" priority="3" />
+  <hook-type function="SHCreateShellFolderView" priority="3" />
+  <hook-type function="SHCreateShellFolderViewEx" priority="3" />
+  <hook-type function="SHCreateShellItem" priority="3" />
+  <hook-type function="SHCreateShellItemArray" priority="3" />
+  <hook-type function="SHCreateShellItemArrayFromDataObject" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateShellItemArrayFromIDLists" priority="3" />
+  <hook-type function="SHCreateShellItemArrayFromShellItem" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHCreateStdEnumFmtEtc" priority="3" />
+  <hook-type function="SHDefExtractIcon" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHDestroyPropSheetExtArray" priority="3" />
+  <hook-type function="SHDoDragDrop" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHEmptyRecycleBin" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHEnumerateUnreadMailAccounts" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHEvaluateSystemCommandTemplate" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHFileOperation" priority="3" />
+  <hook-type function="SHFindFiles" priority="3" />
+  <hook-type function="SHFind_InitMenuPopup" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHFlushSFCache" priority="3" />
+  <hook-type function="SHFormatDrive" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHFree" priority="3" />
+  <hook-type function="SHFreeNameMappings" priority="3" />
+  <hook-type function="SHGetAttributesFromDataObject" priority="3" />
+  <hook-type function="SHGetDataFromIDList" priority="3" />
+  <hook-type function="SHGetDesktopFolder" priority="3" />
+  <hook-type function="SHGetDiskFreeSpace" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetDriveMedia" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetFileInfo" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetFolderLocation" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetFolderPath" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetFolderPathAndSubDir" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetIDListFromObject" priority="3" />
+  <hook-type function="SHGetIconOverlayIndex" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetImageList" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetInstanceExplorer" priority="5" />
+  <hook-type function="SHGetKnownFolderIDList" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetKnownFolderPath" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetLocalizedName" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetMalloc" priority="5" />
+  <hook-type function="SHGetNameFromIDList" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetNewLinkInfo" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetPathFromIDList" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetPathFromIDListEx" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetPropertyStoreForWindow" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetPropertyStoreFromIDList" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetPropertyStoreFromParsingName" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetRealIDL" priority="3" />
+  <hook-type function="SHGetSetFolderCustomSettings" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetSetSettings" priority="3" />
+  <hook-type function="SHGetSettings" priority="3" />
+  <hook-type function="SHGetSpecialFolderLocation" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHGetSpecialFolderPath" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHGetStockIconInfo" priority="3" />
+  <hook-type function="SHGetTemporaryPropertyForItem" priority="3" />
+  <hook-type function="SHGetUnreadMailCount" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHHandleUpdateImage" priority="3" />
+  <hook-type function="SHILCreateFromPath" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHInvokePrinterCommand" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHIsFileAvailableOffline" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHLimitInputEdit" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHLoadInProc" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHLoadNonloadedIconOverlayIdentifiers" priority="3" />
+  <hook-type function="SHMapPIDLToSystemImageListIndex" priority="3" />
+  <hook-type function="SHMultiFileProperties" priority="3" />
+  <hook-type function="SHObjectProperties" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHOpenFolderAndSelectItems" priority="3" />
+  <hook-type function="SHOpenPropSheet" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHOpenWithDialog" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHParseDisplayName" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHPathPrepareForWrite" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHPropStgCreate" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHPropStgReadMultiple" priority="3" />
+  <hook-type function="SHPropStgWriteMultiple" priority="3" />
+  <hook-type function="SHQueryRecycleBin" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHQueryUserNotificationState" priority="3" />
+  <hook-type function="SHRemoveLocalizedName" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHReplaceFromPropSheetExtArray" priority="3" />
+  <hook-type function="SHRestricted" priority="3" />
+  <hook-type function="SHSetDefaultProperties" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHSetFolderPath" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHSetInstanceExplorer" priority="3" />
+  <hook-type function="SHSetKnownFolderPath" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHSetLocalizedName" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHSetTemporaryPropertyForItem" priority="3" />
+  <hook-type function="SHSetUnreadMailCount" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHShellFolderView_Message" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHSimpleIDListFromPath" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHStartNetConnectionDialog" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SHTestTokenMembership" priority="3" />
+  <hook-type function="SHUpdateImage" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SHValidateUNC" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="SetCurrentProcessExplicitAppUserModelID" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="ShellAbout" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="ShellExecute" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="ShellExecuteEx" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="Shell_GetCachedImageIndex" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="Shell_GetImageLists" priority="3" />
+  <hook-type function="Shell_MergeMenus" priority="3" />
+  <hook-type function="Shell_NotifyIcon" priority="3" />
+  <hook-type function="SignalFileOpen" priority="3" />
+  <hook-type function="StrChr" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="StrChrI" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="StrCmpN" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="StrCmpNI" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="StrRChr" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="StrRChrI" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="StrRStrI" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="StrStr" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="StrStrI" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="Win32DeleteFile" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="WriteCabinetState" priority="3" />
+<!-- End Shell32.dll -->
+
+<!-- Begin Wininet.dll -->
+  <hook-type function="CommitUrlCacheEntry" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CreateMD5SSOHash" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CreateUrlCacheEntry" priority="5">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="CreateUrlCacheGroup" priority="5" />
+  <hook-type function="DeleteUrlCacheEntry" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DeleteUrlCacheGroup" priority="5" />
+  <hook-type function="DetectAutoProxyUrl" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="DllInstall" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FindCloseUrlCache" priority="5" />
+  <hook-type function="FindFirstUrlCacheEntry" priority="5">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FindFirstUrlCacheGroup" priority="3" />
+  <hook-type function="FindNextUrlCacheEntry" priority="3" />
+  <hook-type function="FindNextUrlCacheGroup" priority="3" />
+  <hook-type function="FtpCommand" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FtpCreateDirectory" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FtpDeleteFile" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FtpFindFirstFile" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FtpGetCurrentDirectory" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FtpGetFile" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="FtpGetFileEx" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="FtpGetFileSize" priority="3" />
+  <hook-type function="FtpOpenFile" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FtpPutFile" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="FtpPutFileEx" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="FtpRemoveDirectory" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="FtpRenameFile" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="FtpSetCurrentDirectory" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="GetUrlCacheEntryInfo" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="GetUrlCacheGroupAttribute" priority="3" />
+  <hook-type function="GopherCreateLocator" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="GopherFindFirstFile" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="GopherGetAttribute" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="GopherGetLocatorType" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="GopherOpenFile" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="HttpAddRequestHeaders" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="HttpEndRequest" priority="3" />
+  <hook-type function="HttpOpenRequest" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="HttpQueryInfo" priority="3" />
+  <hook-type function="HttpSendRequest" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetAttemptConnect" priority="3" />
+  <hook-type function="InternetAutodial" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetAutodialHangup" priority="3" />
+  <hook-type function="InternetCanonicalizeUrl" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetCheckConnection" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetClearAllPerSiteCookieDecisions" priority="3" />
+  <hook-type function="InternetCloseHandle" priority="3" />
+  <hook-type function="InternetCombineUrl" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetConfirmZoneCrossing" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetConnect" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetCrackUrl" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetCreateUrl" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetDial" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetEnumPerSiteCookieDecision" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetErrorDlg" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetFindNextFile" priority="3" />
+  <hook-type function="InternetGetConnectedState" priority="3">
+    <match result="True">path</match>
+  </hook-type>
+  <hook-type function="InternetGetConnectedStateEx" priority="3">
+    <match result="True">path</match>
+	<match>detail</match>
+  </hook-type>
+  <hook-type function="InternetGetCookie" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetGetLastResponseInfo" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetGetPerSiteCookieDecision" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetGoOnline" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetHangUp" priority="3" />
+  <hook-type function="InternetInitializeAutoProxyDll" priority="3" />
+  <hook-type function="InternetLockRequestFile" priority="3" />
+  <hook-type function="InternetOpen" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetOpenUrl" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetQueryDataAvailable" priority="3" />
+  <hook-type function="InternetQueryOption" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetReadFile" priority="3" />
+  <hook-type function="InternetSetCookie" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetSetDialState" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetSetFilePointer" priority="3" />
+  <hook-type function="InternetSetOption" priority="3">
+    <match>path</match>
+  </hook-type>  
+  <hook-type function="InternetSetPerSiteCookieDecision" priority="3">
+    <match>path</match>
+    <match>detail</match>
+  </hook-type>
+  <hook-type function="InternetSetStatusCallback" priority="3" />
+  <hook-type function="InternetTimeFromSystemTime" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetTimeToSystemTime" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="InternetUnlockRequestFile" priority="3" />
+  <hook-type function="InternetWriteFile" priority="3" />
+  <hook-type function="PrivacyGetZonePreference" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="PrivacySetZonePreference" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="ReadUrlCacheEntryStream" priority="3" />
+  <hook-type function="ResumeSuspendedDownload" priority="3" />
+  <hook-type function="RetrieveUrlCacheEntryFile" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="RetrieveUrlCacheEntryStream" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SetUrlCacheEntryGroup" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SetUrlCacheEntryInfo" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="SetUrlCacheGroupAttribute" priority="3" />
+  <hook-type function="UnlockUrlCacheEntryFile" priority="3">
+    <match>path</match>
+  </hook-type>
+  <hook-type function="UnlockUrlCacheEntryStream" priority="3" />
+<!-- End Wininet.dll -->
+<!-- Begin Process functions -->
+  <hook-type function="TerminateProcess" priority="2" />
+  <hook-type function="TerminateThread" priority="2">
+	<match result="True">detail</match>
+  </hook-type>
+  <hook-type function="CreateThread" priority="2"/>
+  <hook-type function="CreateRemoteThread" priority="2"/>
+  <hook-type function="SetWindowsHook" priority="2">
+	<match>path</match>
+  </hook-type>
+  <hook-type function="GetProcAddress" priority="3">
+	<match>path</match>
+	<match>detail</match>
+  </hook-type>
+
+<!-- End Process functions -->
+</trace-info>

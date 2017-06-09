@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 14.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpyStudioHelperPlugin", "SpyStudioHelperPlugin.vcxproj", "{E06C823B-7F8C-403A-A65D-9C0072A30258}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpb", "libpb\libpb.vcxproj", "{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DotNetProfilingFunctionGenerator", "DotNetProfilingFunctionGenerator\DotNetProfilingFunctionGenerator.vcxproj", "{3FA964B9-6E3F-4332-ADE3-908948C971FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug with stack traces|Win32 = Debug with stack traces|Win32
+		Debug with stack traces|x64 = Debug with stack traces|x64
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug with stack traces|Win32.ActiveCfg = Debug with stack traces|Win32
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug with stack traces|Win32.Build.0 = Debug with stack traces|Win32
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug with stack traces|x64.ActiveCfg = Debug with stack traces|x64
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug with stack traces|x64.Build.0 = Debug with stack traces|x64
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug|Win32.Build.0 = Debug|Win32
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug|x64.ActiveCfg = Debug|x64
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Debug|x64.Build.0 = Debug|x64
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Release|Win32.ActiveCfg = Release|Win32
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Release|Win32.Build.0 = Release|Win32
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Release|x64.ActiveCfg = Release|x64
+		{E06C823B-7F8C-403A-A65D-9C0072A30258}.Release|x64.Build.0 = Release|x64
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug with stack traces|Win32.ActiveCfg = Debug|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug with stack traces|Win32.Build.0 = Debug|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug with stack traces|x64.ActiveCfg = Debug|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug with stack traces|x64.Build.0 = Debug|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug|Win32.Build.0 = Debug|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug|x64.ActiveCfg = Debug|x64
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Debug|x64.Build.0 = Debug|x64
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Release|Win32.ActiveCfg = Release|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Release|Win32.Build.0 = Release|Win32
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Release|x64.ActiveCfg = Release|x64
+		{8F881B5E-CA20-44C3-845F-4E6CEE9D37A8}.Release|x64.Build.0 = Release|x64
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Debug with stack traces|Win32.ActiveCfg = Debug|Win32
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Debug with stack traces|Win32.Build.0 = Debug|Win32
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Debug with stack traces|x64.ActiveCfg = Debug|Win32
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Debug|Win32.Build.0 = Debug|Win32
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Debug|x64.ActiveCfg = Debug|x64
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Debug|x64.Build.0 = Debug|x64
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Release|Win32.ActiveCfg = Release|Win32
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Release|Win32.Build.0 = Release|Win32
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Release|x64.ActiveCfg = Release|x64
+		{3FA964B9-6E3F-4332-ADE3-908948C971FB}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

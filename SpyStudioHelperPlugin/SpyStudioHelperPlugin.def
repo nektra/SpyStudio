@@ -1,0 +1,107 @@
+EXPORTS
+  OnLoad                              @1
+  OnUnload                            @2
+  OnHookAdded                         @3
+  OnHookRemoved                       @4
+  OnFunctionCall                      @5
+  GetFunctionCallbackName             @6
+
+  OnCoCreateInstance                  @7
+  OnCoCreateInstanceEx                @8
+
+  OnNtOpenKey                         @9
+  OnNtOpenKeyEx                       @10
+  OnNtCreateKey                       @11
+  OnNtQueryKey                        @12
+  OnNtQueryValue                      @13
+  OnNtQueryMultipleValues             @14
+  OnNtSetValue                        @15
+  OnNtDeleteValue                     @16
+  OnNtDeleteKey                       @17
+  OnNtEnumerateValueKey               @18
+  OnNtEnumerateKey                    @19
+  OnNtRenameKey                       @20
+
+  OnNtCreateFile                      @21
+  OnNtOpenFile                        @22
+  OnNtDeleteFile                      @23
+  OnNtQueryDirectoryFile              @24
+  OnNtQueryAttributesFile             @25
+
+  OnNtRaiseException                  @26
+  OnNtRaiseHardError                  @27
+  OnRtlUnhandledExceptionFilter2      @28
+  OnUnhandledExceptionFilter          @29
+
+  OnCreateWindowExA                   @30
+  OnCreateWindowExW                   @31
+  OnCreateDialogIndirectParamAorW     @32
+
+  OnCreateProcessInternalW            @33
+
+  OnFindResourceExW                   @34
+
+  OnUnimplementedFunctionCall         @35
+
+  OnCustomHookCall                    @36
+
+  OnGetClassObject                    @37
+
+  OnLoadDLL                           @38
+
+  OnCreateServiceA                    @39
+  OnCreateServiceW                    @40
+  OnOpenServiceA                      @41
+  OnOpenServiceW                      @42
+
+  OnNtOpenKey_Secondary               @101
+  OnNtOpenKeyEx_Secondary             @102
+  OnNtCreateKey_Secondary             @103
+  OnNtQueryKey_Secondary              @104
+  OnNtQueryValueKey_Secondary         @105
+  OnNtQueryMultipleValueKey_Secondary @106
+  OnNtSetValueKey_Secondary           @107
+  OnNtDeleteValueKey_Secondary        @108
+  OnNtDeleteKey_Secondary             @109
+  OnNtEnumerateValueKey_Secondary     @110
+  OnNtEnumerateKey_Secondary          @111
+  OnNtRenameKey_Secondary             @112
+
+  OnNtCreateFile_Secondary            @113
+  OnNtOpenFile_Secondary              @114
+  OnNtDeleteFile_Secondary            @115
+  OnNtQueryDirectoryFile_Secondary    @116
+  OnNtQueryAttributesFile_Secondary   @117
+
+  OnLoadResource                      @118
+
+  DllGetClassObject                   PRIVATE
+  
+  OnRegOpenKeyExW                     @119
+  OnRegCloseKey                       @120
+  OnRegQueryValueExW                  @121
+  OnDialogBoxIndirectParamAorW        @122
+
+  OnInternetSetStatusCallbackA        @123
+  OnInternetSetStatusCallbackW        @124
+  OnInternetOpenUrlA                  @125
+  OnInternetOpenUrlW                  @126
+  OnInternetConnectA                  @127
+  OnInternetConnectW                  @128
+  OnHttpOpenRequestA                  @129
+  OnHttpOpenRequestW                  @130
+  OnHttpAddRequestHeadersA            @131
+  OnHttpAddRequestHeadersW            @132
+  OnHttpSendRequestA                  @133
+  OnHttpSendRequestW                  @134
+  OnHttpSendRequestExA                @135
+  OnHttpSendRequestExW                @136
+  OnHttpEndRequestA                   @137
+  OnHttpEndRequestW                   @138
+  OnInternetReadFile                  @139
+  OnInternetReadFileExA               @140
+  OnInternetReadFileExW               @141
+  OnInternetWriteFile                 @142
+  OnInternetCloseHandle               @143
+  OnInternetStatusCallbackA           @144
+  OnInternetStatusCallbackW           @145

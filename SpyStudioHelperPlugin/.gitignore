@@ -1,0 +1,15 @@
+.vs/
+obj/
+bin/
+ipch/
+libpb/obj/
+DotNetProfilingFunctionGenerator/obj/
+DotNetProfilingFunctionGenerator/bin/*.exe
+DotNetProfilingFunctionGenerator/bin/*.iobj
+DotNetProfilingFunctionGenerator/bin/*.ipdb
+DotNetProfilingFunctionGenerator/bin/*.pdb
+DotNetProfilingFunctionGenerator/bin/*.h
+DotNetProfilingFunctionGenerator/bin/*.cpp
+DotNetProfilingFunctionGenerator/bin/*.inl
+lib/libpb*
+lib64/libpb*

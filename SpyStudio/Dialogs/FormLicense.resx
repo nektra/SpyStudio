@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="textBoxLicense.Text" xml:space="preserve">
+    <value>Nektra Non-Commercial License Agreement
+
+______________________________________________________________________
+Nektra LLC. license agreement ("NKT-NCLS") is a legal agreement between you and Nektra LLC. (“Nektra” or “we”) for the software or data identified above, which may include source code, and any associated materials, text or speech files, associated media and "online" or electronic documentation and any updates we provide in our discretion (together, the "Software"). 
+
+By installing, copying, or otherwise using this Software, you agree to be bound by the terms of this NKT-NCLS. If you do not agree, do not install copy or use the Software. The Software is protected by copyright and other intellectual property laws and is licensed, not sold.    
+
+SCOPE OF RIGHTS:
+You may use this Software for any non-commercial purpose, subject to the restrictions in this NKT-NCLS. Some purposes which can be non-commercial are teaching, academic research, public demonstrations and personal experimentation. 
+You may not use or any derivative works in any form for commercial purposes. Examples of commercial purposes would be running business operations, licensing, leasing, or selling the Software, distributing the Software for use with commercial products, using the Software in the creation or use of commercial products or any other activity which purpose is to procure a commercial gain to you or others.
+
+In return, we simply require that you agree: 
+1.	That you will not remove any copyright or other notices from the Software.
+2.	That if any of the Software is in binary format, you will not attempt to modify such portions of the Software, or to reverse engineer or decompile them, except and only to the extent authorized by applicable law. 
+3.	That any feedback about the Software provided by you to us is voluntarily given, and Nektra shall be free to use the feedback as it sees fit without obligation or restriction of any kind, even if the feedback is designated by you as confidential. 
+4.	That you will not distribute any part of this NKT-NCLS, nor the binaries, nor the source code.
+5.	THAT THE SOFTWARE COMES "AS IS", WITH NO WARRANTIES. THIS MEANS NO EXPRESS, IMPLIED OR STATUTORY WARRANTY, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, any warranty against interference with your enjoyment of the Software OR ANY WARRANTY OF TITLE OR NON-INFRINGEMENT. There is no warranty that this Software will fulfill any of your particular purposes or needs. ALSO, YOU MUST PASS THIS DISCLAIMER ON WHENEVER YOU DISTRIBUTE THE SOFTWARE OR DERIVATIVE WORKS.
+6.	THAT NEITHER NEKTRA NOR ANY CONTRIBUTOR TO THE SOFTWARE WILL BE LIABLE FOR ANY DAMAGES RELATED TO THE SOFTWARE OR THIS NKT-NCLS, INCLUDING DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL OR INCIDENTAL DAMAGES, TO THE MAXIMUM EXTENT THE LAW PERMITS, NO MATTER WHAT LEGAL THEORY IT IS BASED ON. ALSO, YOU MUST PASS THIS LIMITATION OF LIABILITY ON WHENEVER YOU DISTRIBUTE THE SOFTWARE OR DERIVATIVE WORKS.
+7.	That we have no duty of reasonable care or lack of negligence, and we are not obligated to (and will not) provide technical support for the Software.
+8.	That if you breach this NKT-NCLS or if you sue anyone over patents that you think may apply to or read on the Software or anyone's use of the Software, this NKT-NCLS (and your license and rights obtained herein) terminate automatically.  Upon any such termination, you shall destroy all of your copies of the Software immediately.  Sections 4, 5, 6, 7, 9, 10, 11 and 12 of this NKT-NCLS shall survive any termination of this NKT-NCLS.
+9.	That the patent rights, if any, granted to you in this NKT-NCLS only apply to the Software, not to any derivative works you make.
+10.	That the Software may be subject to U.S. export jurisdiction at the time it is licensed to you, and it may be subject to additional export or import laws in other places.  You agree to comply with all such laws and regulations that may apply to the Software after delivery of the software to you.
+11.	That all rights not expressly granted to you in this NKT-NCLS are reserved.
+12.	That this NKT-NCLS shall be construed and controlled by the laws of the State of Florida, USA, without regard to conflicts of law.  If any provision of this NKT-NCLS shall be deemed unenforceable or contrary to law, the rest of this NKT-NCLS shall remain in full effect and interpreted in an enforceable manner that most nearly captures the intent of the original language. 
+
+Copyright (c) Nektra LLC. All rights reserved.
+
+Do you accept all of the terms of the preceding NKT-NCLS license agreement? If you accept the terms, click “Agree”. Otherwise click “Cancel.”</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAMDAAAAEACACoDgAANgAAACAgAAABAAgAqAgAAN4OAAAQEAAAAQAIAGgFAACGFwAAKAAAADAA
+        AABgAAAAAQAIAAAAAAAACQAAAAAAAAAAAAAAAQAAAAEAAAAAAABZVlYAWlZYAFxWWgBeVF4AW1hYAFxZ
+        WQBgXV0AYVRiAGVSaABtTnUAcE15AHRTfQBycHAAd3R0AHx6egB2S4MAeEmGAH1HjgCTP64AlD2xAJY8
+        tACYPrUAhUSaAIpCogCMQaUAj0CoAJlHswCYQbUAmUW2AJlMswCcSLgAnk25AJtQsgCcV7EAoE67AKBR
+        ugChVboAolK9AKNUvQCkVb4ApV29AKFyrgCid64AomS1AKRptgCkY7gAqHK6AKtkwwCtZsQArGvAAK1u
+        wgCtaMYAsXfDALl9zgCIhYUAkoKVAJeWlgCal5cAnJubAKSArACplqoAqZmqAKqdqQCogrEAsp61ALCS
+        uQCsqKcArKaoAK2pqACwrKsAsa2sAK6isQCzq7AAtay0ALKxsQC3tLMAtrG0ALe0tAC5trUAuLK4ALq5
+        uQC+urkAwLy7AMG+vgDCwL8AtYDFALiGxgC5iscAt4HJALqKyAC7jsgAvpPKAL+WygC/lM4AvobQAL6g
+        xwDAmcsAwIrSAMOR1QDGl9YAyJ7WAMqe2QDJrNAAzq7ZAMyz0QDQu9MA1bHgANi24wDaueQAwsDAAMTD
+        wwDHxcQAyMfHAM3KygDQzs4A0sHVANXJ1wDYw98A1srYANHQ0ADU0NMA1dTUANnW1gDZ0dkA29TaAN3Z
+        2wDe3NsA393cAODe3gDh4N8A4MbpAOTN7ADn0+4A6dfwAOLi4QDk4+IA5uXlAOjn5wDo6OcA6ejoAPDw
+        7wDu4fMA7+L0APPp9gD17PcA9e34APLx8QD29vYA9/D5APjy+gD59foA+vf8APr5+QD7+PwA/Pr8AP7+
+        /gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJMAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAh5yNhwAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIeAgJycgYCHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACHgYGAgJycgIGBggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAh4eBgICA
+        gJycgICAgICHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIyHgYCAgICAgJycgICAgICAgIcA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgoCAgICAgICAdJycgICAgICAgICBiwAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAIeAgICAgICAfnRXIJycMmd+gICAgICAgIIAAAAAAAAAAAAAAAAAAAAAAAAAAACA
+        gICAgICAgIB1WiUWFpycFhY1aYCAgICAgICAigAAAAAAAAAAAAAAAAAAAAAAAFUAgICAgICAdVslFhYW
+        FpycFhYWHVZqfoCAgICAgAAAAAAAAAAAAAAAAAAAAAAAAFUGAICAgH5cKRYWFhYWFpycFhYWFhYgW3SB
+        gICAAEwAAAAAAAAAAAAAAAAAAAAAAFUGAgCAXCUWFhYWFhYWFpycFhYVFhYVFiBcd4AATE8AAAAAAAAA
+        AAAAAAAAAAAAAFECAwwsHRYWFhYWFRYVFpycFhYWFRYVFhYWMlxERUwAAAAAAAAAAAAAAAAAAAAAAFAL
+        GBYWFhYWFhUWFRYVFpycFhYWFRYVFhYWFhYhTEoAAAAAAAAAAAAAAAAAAAAAAC8WFhYWFhYWFhUVFhUW
+        FpycFhYWFRYVFRYWFhYWHC0AAAAAAAAAAAAAAAAAAABZHRYWFhYWFhUWFRUWFRYVFpycFhYWFRYVFRYW
+        FhYWFhYdXAAAAAAAAAAAAAAAZSUWFhYWFhYUFRYVFhUVFhUWFpycFhYWFRYVFRYVFhYVFhYWFiVoAAAA
+        AAAAAABsIxYWFhYWFBYUFRUVFRUVFRUVFZycFhUVFRUVFRUVFRUVFRUWFhYWMAAAAAAAAAAAAGMWFhYV
+        FhUUFRYVFhUVFhUWkJycIBYWFRYVFRYVFhUVFhUWFRZjAAAAAAAAAAAAAAAAYxYWFhUVFhUWFRUWFl+c
+        lo6QnGsgFhYVFRYVFhUVFhUgZAAAAAAAAAAAAAAAAAAAAGAZFhYVFRYVFhYwkJyWayUog5yYXxYWFhUW
+        FRYVFikAAAAAAAAAAAAAAAAAAAAAAG4DERkVFhUWMISclmslFhYWFiWFnJA2FhYWFRYhPEwAAAAAAAAA
+        AAAAAAAAAAAAAG4DAQkSFBxrnJiFJRYWFhYWFhUWMJiYhiUWHjw/RUwAAAAAAAAAAAAAAAAAAAAAAG4C
+        AwEGSJyYjjAWFhYWFhUWFRYWFhZjmJx2SkNDRUwAAAAAAAAAAAAAAAAAAAAAAG4CBgONnIo4FxYWFhYV
+        FRUVFRUVFhYcQHWcnHNGQ08AAAAAAAAAAAAAAAAAAAAAAG4GgJyTOQEDAwoXFhYVFhUVFhUWHSs/Q0NG
+        i5yccU8AAAAAAAAAAAAAAAAAAAAAAIyWmUsGAwEBAQEDCxgWFRUWFhwrPURDQ0NFRU+TnIEAAAAAAAAA
+        AAAAAAAAAAAAAJyUBQUBAQMBAQEDAQMQGBUcKj1EQ0NDQ0VFRUVFVQAAAAAAAAAAAAAAAAAAAAAAAAAA
+        cQ4GAQICAgECAwEBCEJBREVDRUVDRUVFRUZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMBgYCAQEBAQEB
+        AQBFRUVFRUVDRUVFVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADoGBQEBAQEBAQBFQ0VDQ0NDRU+C
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6DwICAgMBAwBFRUVFRUVFewAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFENAgIBAgBFRUVFRnMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAOgYGAgBFRUVVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3
+        BgBFUYcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAegAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD///////8AAP///////wAA////////AAD///////8AAP///////wAA////////AAD///7///8AAP//
+        /D///wAA///wD///AAD//8AH//8AAP//AAH//wAA//wAAH//AAD/+AAAH/8AAP/gAAAP/wAA/4AAAAP/
+        AAD/QAAAA/8AAP8gAAAF/wAA/xAAAAn/AAD/AAAAAf8AAP8AAAAB/wAA/wAAAAH/AAD8AAAAAH8AAPAA
+        AAAAHwAA4AAAAAAPAAD4AAAAAB8AAP4AAAAAfwAA/wAAAAH/AAD/AAAAAf8AAP8AAAAB/wAA/wAAAAH/
+        AAD/AAAAAf8AAP8AAAAB/wAA/wAAAAH/AAD/AAAAA/8AAP/AAAAH/wAA//ABAB//AAD//AEAP/8AAP/+
+        AQD//wAA//+BA///AAD//+EP//8AAP//+R///wAA///9////AAD///////8AAP///////wAA////////
+        AAD///////8AAP///////wAA////////AAAoAAAAIAAAAEAAAAABAAgAAAAAAAAEAAAAAAAAAAAAAAAB
+        AAAAAQAAAAAAAFlWVgBaVlkAXFVaAF5UXQBbWFgAXFpaAGBeXgBiUmQAZFJnAHFMewByTH0AZGFhAGlm
+        ZgBsaWkAe3l5AHhMhQB5SYgAfGOCAHxlgQCQP6sAkj6uAJU9sgCWPLQAmD+1AIFFlACIQp8Ai0GjAJNT
+        qACXQbMAl0C0AJlBtQCbRrcAmk2yAJxItwCcTrUAm0a4AJxGuACeS7oAn0+5AKBOugChU7sAoVW6AKNT
+        vQClXLwAl2WoAJhmqACfaq8AonSvAKJ4rQCibbEAoWq0AKd3tACpX8IArG3AAK9pxgCxb8cAtXbKAIOB
+        gQCEgoIAh4aGAI2LiwCTkZEAmJOZAKWHrwCnjqsAoZGnAKaSrQColaoAqpWsALCTuQCioaEAp6anAKqm
+        pwCspqcArKinAK6mqgCqqakAramoAK6sqwCvr68Asa2sALGlsAC0r7AAs7CwALWxsAC2trUAuLSzALu3
+        tgC9sb0Aubi4ALy5uAC/vr0AwL++ALaExQC4iMcAu4/IALqUxgDGldcAyJnXAMqc2QDFo80AxaTOAMio
+        0gDNotsAzqXcAMuy0QDOt9MAz7nTANOv4ADVsuEA3L7mAMTDwwDLyskAzMrJANLB1QDTxNUA2M3YANLR
+        0QDX1tYA2tPZANvX2gDd2doA3tzbAN/d3ADh398A4uDfAN3B5gDfxOgA4MbpAOLJ6QDm0e0A6t3tAOze
+        8QDm5eUA6unpAO7h8wDu5vAA8OX0APHx8AD08/MA9PTzAPfy+QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAHyOjnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH58fI6OfHx8AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAF18fHx8jo18fHx8fAAAAAAAAAAAAAAAAAAAAAAAAFZ8fHx8eWqOjnR8fHx8fAAAAAAAAAAAAAAA
+        AAAAAFZxfHx8fHRfJ46OLGV4fHx8fAAAAAAAAAAAAAAAAAABAHF8fGteIBcXjo4XGCxldXx8fAAAAAAA
+        AAAAAAAAAAEBAHVgKh4XFxeOjhcXFyI2anwAVAAAAAAAAAAAAAAAAQkQIh4XFxcXF46OFxcXFxciNkVT
+        AAAAAAAAAAAAAAABGxcXFxcXFxcXjo4XFxcXFxcXIzQAAAAAAAAAAAAALBcXHhcXFxcXFxeOjhcXFxcX
+        FxcXFypDAAAAAAAARigXFxcXFxcXFxcXF46OFxcXFxcXFxcXFyAzAAAAAAAAAC0lFxcXFxcXFyiOjo44
+        IBcXFxcXFxcnLQAAAAAAAAAAAAEVFxcXFxeOjo5jjo5oKBcXHhceIgAAAAAAAAAAAAAAAQkQFR45jo5k
+        JRcXjo6OYiogIjFUAAAAAAAAAAAAAAABAQMSjo6ONRgXFxcXII6OjmFUVFQAAAAAAAAAAAAAAAENjo6O
+        EhkVFxcXFxcXIjCOjo5dVwAAAAAAAAAAAAAAAI6OjgcBAwsaFxcXHi9BSkuOjo5UAAAAAAAAAAAAAAAA
+        jgEBAQMBAQMLHDNFS0tLS0pKjgAAAAAAAAAAAAAAAAAAAAEBAQEBAQM/SktNTUtNS0sAAAAAAAAAAAAA
+        AAAAAAAAAAABBgEBAQBLS0tLS0sAAAAAAAAAAAAAAAAAAAAAAAAAAAABBwEBAE1NUktLAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAABAQwAUktLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBLAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD///////////////////////7////8P///8A///8AD//8AAf/8AAD/+gAAf/kA
+        AL/4AAA/+AAAP/AAAA/AAAAH8AAAD/gAAD/4AAA/+AAAP/gAAD/8AAA//AAAf/8AAP//wQP//+EH///x
+        H////X///////////////////////ygAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAB
+        AAAAAAAAWVVWAFpVWABdVFwAWlhYAGJTYwBkUmcAY19gAGZQagBsVHEAbmpsAHJwcQB4dnYAe3p6AIB+
+        fwB3UIIAf0aQAH5hhgCVO7MAlTyyAJY8tACCRZYAgkmTAIhCngCFY48Aim+RAJFlnwCPQqkAlVGsAJdD
+        swCXQLQAmUO2AJlEtQCaS7QAnEq3AJtGuACbW7AAnlq0AJ9SuQCgULsAo1S9AJhzpACoZL4Ap3S3AKhz
+        uACpdLkAq3i5AKdcwACuacUAr3TBALF5wgCyccgAgoGBAIeGhgCQjY8AoJ2dAJ6EpgCgj6YApYWsAKKP
+        qACjkqQAqJOrAK2crwCogrEAoqChAKajogClpKQArKenAKuopwCqoKgArKeqAK6irwCrqKgAr6urALyt
+        vQCysrEAuLi3ALu5uQC8u7oAvby7AL27vQC5iccAv5LPAL+3wADAi9IAwo7TAMST1ADGl9YAyZ3YAMWj
+        zQDGp84Awb7BAMii1ADKoNgA0KrdAM+50wDQvdMA1rnfANWz4ADZueMAxcHDAMbDxgDR0M8A0cDUANfM
+        1wDXy9oA1NPSANnX1wDZ0dgA3NbaAN3a2gDe3NsA39zcANnB4ADgx+gA483rAOTP6wDj3uMA5N7mAOXS
+        7ADo1+4A6trwAOzd8QDq6OkA7ufwAPDm8wD07/UA8/DzAPfy+QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1f3AAAAAAAAAAAAAAAHVwcH9wcHAAAAAAAAAAdXV1
+        dVx/WW1wcAAAAAAAA3V1MR8zfx4qWXBwAAAAAAMDJh4eM38eHiMxcAAAADkXHh4eEjN/Eh4eHiM4ADsc
+        Hh4SEhJWfx8eEhIeHSkAAAMSEiJ/f39eJx4eHQAAAAADA1R/VCMjf39YLD4AAAAADn9/AxseHh4uf39k
+        AAAAAAA2BwMDFSQ6RUl/fwAAAAAAAA0BAwM3Q0RBQQAAAAAAAAAANQQDN0VAAAAAAAAAAAAAAAAANTcA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD+PwAA+A8AAOAHAADAAwAAwAMAAIABAAAAAAAAwAMAAMAD
+        AADAAwAA4AMAAPAHAAD4HwAA/n8AAP//AAA=
+</value>
+  </data>
+</root>

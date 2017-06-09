@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nektra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\nektra.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nektra_logo_77x77" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\nektra_logo_77x77.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogStore_CompleteEvent_Cannot_find_Desired_Access" xml:space="preserve">
+    <value>Cannot find Desired Access</value>
+  </data>
+  <data name="IsR" xml:space="preserve">
+    <value>UGF0dGVyblZlcnNpb24=</value>
+  </data>
+  <data name="main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\main.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dirpe" xml:space="preserve">
+    <value>c3B5c3R1ZGlvQG5la3RyYS5jb20=</value>
+  </data>
+  <data name="DevCla" xml:space="preserve">
+    <value>LS0tLS1CRUdJTiBERVZJQVJFIExJQ0VOU0UtLS0tLQ0KUEdsdVptOCtQSEJ5YjJST1lXMWxQand2Y0hKdlpFNWhiV1UrUEhWelpYSk9ZVzFsUGxOd2VWTjBkV1JwYnp3dmRYTmxjazVoYldVKw0KUEhWelpYSkZUV0ZwYkQ1ellXeGxjMEJ1Wld0MGNtRXVZMjl0UEM5MWMyVnlSVTFoYVd3K1BHeHBZMVI1Y0dVK1EyOXRiV1Z5WTJsaA0KYkR3dmJHbGpWSGx3WlQ0OFpYaHdSR0YwWlQ0eU1ERTFNRGd4TWp3dlpYaHdSR0YwWlQ0OEwybHVabTgrfEd4VjVoNEZxT2ZON1Z2bw0KYkpMU3ZwV1VxZDZjU2dCN1pZbmh1ZmV2TmR6Ry81MDltWlNFTmNYOEQxa0t1Y1BtWGY0VGNNbWUxU2xCS0FZeEJGek1JOGxCZEV1Ng0KKzUvR2lUMkkzYWxpRkxhbUJkSktyaXNFMktVWHRRTU8rZkR6ZlBtQUFSNjh0c3ZkbXdpb3NzNzNoRXZZN1Y0UWRpWDRFRmprZkg3Rw0KV3Z5MGJaSVpBZXN1Z1dJZjV4czQxUWhNMERjMlFoNVZkb1lpN204MjdHNU9zUnhlZWJPT2IyTTRmeitpSERCSElLcGl4Q2svcDZNMQ0KWHpQRG15N2xhRUNEN2VuNmdRMUJ2NStyckN3MWg4YTNrMVFvekMwb3V4Tld1TWJPQ1BRdGZYMjBaQU5aSytHaUpQTEF2NTNCbllvNQ0KOEkvZzZlWEJ4UnptT1VDbXJKMWtLUnc9PQ0KLS0tLS1FTkQgREVWSUFSRSBMSUNFTlNFLS0tLS0=</value>
+  </data>
+  <data name="Hooks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hooks.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="arrow_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\arrow-up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FunctionTypes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FunctionTypes.xml;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ProcMon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProcMon.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>V2hlZWxTY3JvbGxMaW5lc0hvb3Zlck1heFRpbWVvdXQ=</value>
+  </data>
+  <data name="arrow_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\arrow-down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RegVa" xml:space="preserve">
+    <value>72832121</value>
+  </data>
+  <data name="include" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\include.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Swv_64bits_Error" xml:space="preserve">
+    <value>Symantec Workstation Virtualization™ SDK does not support 64 bits. Run 32 bits version of this application to use this feature.</value>
+  </data>
+  <data name="exclude" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\exclude.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SymLayerSelect_ButtonOkLayerClick_Error_exporting_data_to_layer_" xml:space="preserve">
+    <value>Error exporting data to layer </value>
+  </data>
+  <data name="control_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\control_play.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Swv_Export_Wizard_Not_Admin_Error" xml:space="preserve">
+    <value> Run this application As Administrator to use the Export Wizard.</value>
+  </data>
+  <data name="TraceInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TraceInfo.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SymLayerListView_Error_loading_layer_list_" xml:space="preserve">
+    <value>Error loading layer list </value>
+  </data>
+  <data name="CPD" xml:space="preserve">
+    <value>Q29udHJvbCBQYW5lbFxEZXNrdG9w</value>
+  </data>
+  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\play.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_no_frame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\play-no-frame.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LicenseCommercial" xml:space="preserve">
+    <value>SpyStudio License Agreement
+
+This copy of SpyStudio ("The Software Product") and accompanying documentation is licensed and not sold. This Software Product is protected by copyright laws and treaties, as well as laws and treaties related to other forms of intellectual property. Nektra LLC or its subsidiaries, affiliates, and suppliers own intellectual property rights in the Software Product. The Licensee's ("you" or "your") license to download, use, copy, or change the Software Product is subject to these rights to all the terms and conditions of this End User License Agreement ("Agreement").
+
+Acceptance
+
+YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT BY SELECTING THE "AGREE" OPTION AND DOWNLOADING THE SOFTWARE PRODUCT OR BY INSTALLING, USING, OR COPYING THE SOFTWARE PRODUCT. YOU MUST AGREE TO ALL OF THE TERMS OF THIS AGREEMENT BEFORE YOU WILL BE ALLOWED TO DOWNLOAD THE SOFTWARE PRODUCT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, YOU MUST SELECT "DECLINE" AND YOU MUST NOT INSTALL, USE, OR COPY THE SOFTWARE PRODUCT.
+
+License Grant
+
+This Agreement entitles you to use one copy of the Software Product. This Agreement does not permit the installation or use of multiple copies of the Software Product, or the installation of the Software Product on more than one computer at any given time, on a system that allows shared used of applications, on a multi-user network, or on any configuration or system of computers that allows multiple users. Multiple copy use or installation is only allowed if you obtain an appropriate licensing agreement for each user and each copy of the Software Product. 
+This Software automatically communicates with servers for two reasons: (1) to send error reports; and (2) to send basic anonymized usage information. You can view sample data to see what information is sent.
+
+Restrictions on Transfer
+
+Without first obtaining the express written consent of Nektra LLC, you may not assign your rights and obligations under this Agreement, or redistribute, encumber, sell, rent, lease, sublicense, or otherwise transfer your rights to the Software Product.
+
+General Restrictions
+
+You may not distribute copies of the software to another party or electronically transfer the software from one computer to another if one computer belongs to another party.
+
+You may not modify, adapt, translate, rent, lease, resell, distribute, or create derivative works based upon the software or any part thereof.
+
+Limited Warranty and Disclaimers
+
+The software is provided "AS IS" without warranty of any kind. Nektra LLC expressly disclaims all implied warranties, included but not limited to the implied warranties of merchantability and fitness for a particular purpose. Nektra LLC does not guarantee the software or any accompanying materials in terms of their correctness, accuracy, reliability, or otherwise. The entire risk as to the results and performance of the software and written materials is assumed by you.
+
+Complete Statement of Warranty
+
+The limited warranty provided in preceding paragraphs are the only warranties of any kind made by Nektra LLC on this product. No oral or written information or advice given by Nektra LLC, its dealers, distributors, agents or employees shall create a warranty or in any way increase the scope of this warranty, and you may not rely on any such information or advice. This warranty gives you specific legal rights. You may have other rights, which vary from country to country.
+
+Limitation of Liability.
+
+In no event will Nektra LLC or its employees be liable to you for any consequential, incidental, or indirect damages arising out of the use or the inability to use the software or accompanying written material. This includes damages for loss of business profits, business interruption and loss of business information. The liability of Nektra LLC for actual damages for any cause whatsoever is limited to the money paid for the software that caused the damages.
+
+Termination
+
+This license is effective until terminated. It will terminate immediately without notice if you fail to comply with any of its provisions. Upon termination you must destroy the software and all copies thereof. You may terminate this license at any time by destroying the software and all copies thereof.
+
+Disputes
+
+This license shall be construed and controlled by the laws of the State of Florida, USA, without regard to conflicts of law.  If any provision of this license shall be deemed unenforceable or contrary to law, the rest of this license shall remain in full effect and interpreted in an enforceable manner that most nearly captures the intent of the original language. 
+
+
+Do you accept all of the terms of the preceding license agreement? If you accept the terms, click “Agree”. Otherwise click “Decline”.</value>
+  </data>
+  <data name="LicenseNonCommercial" xml:space="preserve">
+    <value>Nektra Non-Commercial License Agreement
+
+______________________________________________________________________
+Nektra LLC. license agreement ("NKT-NCLS") is a legal agreement between you and Nektra LLC. (“Nektra” or “we”) for the software or data identified above, which may include source code, and any associated materials, text or speech files, associated media and "online" or electronic documentation and any updates we provide in our discretion (together, the "Software"). 
+
+By installing, copying, or otherwise using this Software, you agree to be bound by the terms of this NKT-NCLS. If you do not agree, do not install copy or use the Software. The Software is protected by copyright and other intellectual property laws and is licensed, not sold.    
+
+SCOPE OF RIGHTS:
+You may use this Software for any non-commercial purpose, subject to the restrictions in this NKT-NCLS. Some purposes which can be non-commercial are teaching, academic research, public demonstrations and personal experimentation. 
+You may not use or any derivative works in any form for commercial purposes. Examples of commercial purposes would be running business operations, licensing, leasing, or selling the Software, distributing the Software for use with commercial products, using the Software in the creation or use of commercial products or any other activity which purpose is to procure a commercial gain to you or others.
+
+In return, we simply require that you agree: 
+1.	That you will not remove any copyright or other notices from the Software.
+2.	That if any of the Software is in binary format, you will not attempt to modify such portions of the Software, or to reverse engineer or decompile them, except and only to the extent authorized by applicable law. 
+3.	That any feedback about the Software provided by you to us is voluntarily given, and Nektra shall be free to use the feedback as it sees fit without obligation or restriction of any kind, even if the feedback is designated by you as confidential. 
+4.	That you will not distribute any part of this NKT-NCLS, nor the binaries, nor the source code.
+5.	THAT THE SOFTWARE COMES "AS IS", WITH NO WARRANTIES. THIS MEANS NO EXPRESS, IMPLIED OR STATUTORY WARRANTY, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, any warranty against interference with your enjoyment of the Software OR ANY WARRANTY OF TITLE OR NON-INFRINGEMENT. There is no warranty that this Software will fulfill any of your particular purposes or needs. ALSO, YOU MUST PASS THIS DISCLAIMER ON WHENEVER YOU DISTRIBUTE THE SOFTWARE OR DERIVATIVE WORKS.
+6.	THAT NEITHER NEKTRA NOR ANY CONTRIBUTOR TO THE SOFTWARE WILL BE LIABLE FOR ANY DAMAGES RELATED TO THE SOFTWARE OR THIS NKT-NCLS, INCLUDING DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL OR INCIDENTAL DAMAGES, TO THE MAXIMUM EXTENT THE LAW PERMITS, NO MATTER WHAT LEGAL THEORY IT IS BASED ON. ALSO, YOU MUST PASS THIS LIMITATION OF LIABILITY ON WHENEVER YOU DISTRIBUTE THE SOFTWARE OR DERIVATIVE WORKS.
+7.	That we have no duty of reasonable care or lack of negligence, and we are not obligated to (and will not) provide technical support for the Software.
+8.	That if you breach this NKT-NCLS or if you sue anyone over patents that you think may apply to or read on the Software or anyone's use of the Software, this NKT-NCLS (and your license and rights obtained herein) terminate automatically.  Upon any such termination, you shall destroy all of your copies of the Software immediately.  Sections 4, 5, 6, 7, 9, 10, 11 and 12 of this NKT-NCLS shall survive any termination of this NKT-NCLS.
+9.	That the patent rights, if any, granted to you in this NKT-NCLS only apply to the Software, not to any derivative works you make.
+10.	That the Software may be subject to U.S. export jurisdiction at the time it is licensed to you, and it may be subject to additional export or import laws in other places.  You agree to comply with all such laws and regulations that may apply to the Software after delivery of the software to you.
+11.	That all rights not expressly granted to you in this NKT-NCLS are reserved.
+12.	That this NKT-NCLS shall be construed and controlled by the laws of the State of Florida, USA, without regard to conflicts of law.  If any provision of this NKT-NCLS shall be deemed unenforceable or contrary to law, the rest of this NKT-NCLS shall remain in full effect and interpreted in an enforceable manner that most nearly captures the intent of the original language. 
+
+Copyright (c) Nektra LLC. All rights reserved.
+
+Do you accept all of the terms of the preceding NKT-NCLS license agreement? If you accept the terms, click “Agree”. Otherwise click “Decline”.</value>
+  </data>
+  <data name="ThinApp_build_bat" xml:space="preserve">
+    <value>@echo off
+
+setlocal
+
+set PROJECT_DIR=%PROJECT_PATH%
+if exist %PROJECT_PATH% goto haspath
+set PROJECT_DIR=%~dp0
+:haspath
+
+Rem default is %PROJECT_DIR%\bin
+set TARGET_DIR=%PROJECT_DIR%\bin
+
+
+rem If Package.ini has an OutDir option, set TARGET_DIR to OutDir
+For /F "tokens=* delims=" %%A in ('type "%PROJECT_DIR%\Package.ini" ^| findstr "OutDir="') Do set IniOutDir=%%A
+if "%IniOutDir:~0,7%"=="OutDir=" set TARGET_DIR=%IniOutDir:~7%
+if NOT "%TARGET_DIR:~1,2%"==":\" if NOT "%TARGET_DIR:~0,2%"=="\\" set TARGET_DIR=%PROJECT_DIR%\%TARGET_DIR%
+
+if exist "%THINSTALL_BIN%\vregtool.exe" goto found
+set THINSTALL_BIN=%PROJECT_DIR%\..\..
+if exist "%THINSTALL_BIN%\vregtool.exe" goto found
+set "THINSTALL_BIN=C:\Program Files\VMware\VMware ThinApp"
+if exist "%THINSTALL_BIN%\vregtool.exe" goto found
+set "THINSTALL_BIN=%ProgramFiles(x86)%\VMware\VMware ThinApp"
+if exist "%THINSTALL_BIN%\vregtool.exe" goto found
+set "THINSTALL_BIN=%ProgramFiles%\VMware\VMware ThinApp"
+if exist "%THINSTALL_BIN%\vregtool.exe" goto found
+echo Could not find vregtool.exe, please set the environment variable THINSTALL_BIN or install to C:\Program Files\VMware\VMware ThinApp
+goto failed
+
+:found
+if not exist "%THINSTALL_BIN%\vftool.exe" goto failed
+if not exist "%THINSTALL_BIN%\tlink.exe" goto failed
+
+if not exist "%TARGET_DIR%" mkdir "%TARGET_DIR%"
+if exist "%TARGET_DIR%\*.exe" del /f /q "%TARGET_DIR%\*.exe"
+if exist "%TARGET_DIR%\*.exe" goto failed
+if exist "%TARGET_DIR%\*.dat" del /f /q "%TARGET_DIR%\*.dat"
+if exist "%TARGET_DIR%\*.dat" goto failed
+if exist "%TARGET_DIR%\*.msi" del /f /q "%TARGET_DIR%\*.msi"
+if exist "%TARGET_DIR%\*.msi" goto failed
+
+"%THINSTALL_BIN%\vregtool" "%TARGET_DIR%\Package.ro.tvr" ImportDir "%PROJECT_DIR%"
+IF ERRORLEVEL 1 GOTO failed
+
+"%THINSTALL_BIN%\vftool" "%TARGET_DIR%\Package.ro.tvr" ImportDir "%PROJECT_DIR%"
+IF ERRORLEVEL 1 GOTO failed
+
+"%THINSTALL_BIN%\tlink" "%PROJECT_DIR%\Package.ini" -OutDir "%TARGET_DIR%"
+IF ERRORLEVEL 1 GOTO failed
+
+goto done
+
+:failed
+echo *** Build failed ***
+goto final
+
+:done
+del "%TARGET_DIR%\*.tvr"
+del "%TARGET_DIR%\*.tvr.thfd"
+echo ---------------------------------------------
+echo Build complete
+
+:final
+exit /b %ERRORLEVEL%
+
+endlocal</value>
+  </data>
+  <data name="syncing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\arrow_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="syncing2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\arrow_refresh_2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

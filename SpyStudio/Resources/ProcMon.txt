@@ -1,0 +1,437 @@
+<operations>
+	<operation name="CancelRemoveDevice" type="Custom" priority="2">
+		<match index="0"/>
+	</operation>
+	<operation name="CancelStopDevice" type="Custom" priority="2">
+		<match index="0"/>
+	</operation>
+	<operation name="CloseFile" type="CloseFile" priority="3">
+		<match index="0" case="False"/>
+	</operation>
+	<operation name="CreateFile" type="CreateFile" priority="3">
+		<match index="0" case="False"/>
+		<match index="2" case="False"/>
+	</operation>
+	<operation name="CreateFileMapping" type="CreateFile" priority="3">
+		<match index="0" case="False"/>
+		<match index="1" case="False"/>
+	</operation>
+	<operation name="ReadFile" type="ReadFile" priority="3">
+		<match index="0" case="False"/>
+	</operation>
+	<operation name="WriteFile" type="WriteFile" priority="3">
+		<match index="0" case="False"/>
+	</operation>
+	<operation name="CreateMailSlot" type="Custom" priority="3">
+		<match index="0"/>
+	</operation>
+	<operation name="CreatePipe" type="Custom" priority="3">
+		<match index="0" case="False"/>
+	</operation>
+	<operation name="Debug Output Profiling" type="Custom" priority="3">
+		<match index="0"/>
+	</operation>
+	<operation name="DeviceChange" type="Custom" priority="3">
+		<match index="0"/>
+	</operation>
+	<operation name="DeviceIoControl" type="Custom" priority="3">
+		<match index="0"/>
+	</operation>
+	<operation name="DeviceUsageNotification" type="Custom" priority="3">
+		<match index="0"/>
+	</operation>
+	<operation name="Eject" type="Custom" priority="2">
+		<match index="0"/>
+	</operation>
+	<operation name="FileStreamInformation" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="FileSystemControl" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="FilterResourceRequirements" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="FlushBuffersFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="InternalDeviceIoControl" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="Load Image" type="LoadLibrary" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="LockFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="NotifyChangeDirectory" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="Power" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="Process Create" type="CreateProcess" priority="1">
+		<match index="0"/>
+	</operation>
+	<operation name="Process Defined" type="Custom" priority="2">
+		<match index="0"/>
+	</operation>
+	<operation name="Process Exit" type="Custom" priority="2">
+		<match index="0"/>
+	</operation>
+	<operation name="Process Profiling" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="Process Start" type="CreateProcess" priority="1">
+		<match index="0"/>
+	</operation>
+	<operation name="Process Statistics" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryAllInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryAttributeInformationVolume" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryAttributeTagFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryBasicInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryBusInformation" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryCapabilities" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryCompressionInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryControlInformationVolume" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryDeviceInformationVolume" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryDeviceRelations" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryDeviceText" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryDirectory" type="QueryDirectoryFile" priority="4">
+		<match index="0" case="False"/>
+		<match index="1" case="False"/>
+	</operation>
+	<operation name="QueryEAFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryEaInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryFileInternalInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryFileQuota" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryFullSizeInformationVolume" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryId" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryInformationVolume" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryInterface" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryLabelInformationVolume" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryLegacyBusInformation" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryMoveClusterInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryNameInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryNetworkOpenInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryNetworkPhysicalNameInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryNormalizedNameInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryObjectIdInformationVolume" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryOpen" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryPnpDeviceState" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryPositionInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryRemoveDevice" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryResourceRequirements" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryResources" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QuerySecurityFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryShortNameInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QuerySizeInformationVolume" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryStandardInformationFile" type="QueryAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryStopDevice" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="QueryStreamInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="ReadConfig" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="RegCloseKey" type="RegOpenKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegCreateKey" type="RegCreateKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegDeleteKey" type="RegDeleteKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegDeleteValue" type="RegDeleteValue" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegEnumKey" type="RegEnumerateKey" priority="5">
+		<match index="0" case="False"/>
+		<match index="1"/>
+	</operation>
+	<operation name="RegEnumValue" type="RegEnumerateValueKey" priority="5">
+		<match case="False" index="0"/>
+		<match case="False" index="1"/>
+		<match index="2" result="true"/>
+	</operation>
+	<operation name="RegFlushKey" type="RegOpenKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegLoadKey" type="RegOpenKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegOpenKey" type="RegOpenKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegQueryKey" type="RegQueryKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegQueryKeySecurity" type="RegQueryKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegQueryMultipleValueKey" type="RegQueryValue" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegQueryValue" type="RegQueryValue" priority="5">
+		<match index="0"/>
+		<match index="2" result="true"/>
+	</operation>
+	<operation name="RegRenameKey" type="RegRenameKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegSetInfoKey" type="RegOpenKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegSetKeySecurity" type="RegOpenKey" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegSetValue" type="RegSetValue" priority="5">
+		<match index="0"/>
+	</operation>
+	<operation name="RegUnloadKey" type="RegOpenKey" priority="2">
+		<match index="0"/>
+	</operation>
+	<operation name="RemoveDevice" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetAllocationInformationFile" type="SetAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetBasicInformationFile" type="SetAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetDispositionInformationFile" type="SetAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetEAFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetEndOfFileInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetFileQuota" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetLinkInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetLock" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetPipeInformation" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetPositionInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetRenameInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetSecurityFile" type="SetAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetShortNameInformation" type="SetAttributesFile" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetValidDataLengthInformationFile" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SetVolumeInformation" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="Shutdown" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="StartDevice" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="StopDevice" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SurpriseRemoval" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="System Statistics" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="SystemControl" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Accept" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Connect" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Disconnect" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Other" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Receive" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Reconnect" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Retransmit" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Send" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP TCPCopy" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="TCP Unknown" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="Thread Create" type="Custom" priority="3">
+	</operation>
+	<operation name="Thread Exit" type="Custom" priority="3">
+	</operation>
+	<operation name="Thread Profile" type="Custom" priority="4">
+	</operation>
+	<operation name="Thread Profiling" type="Custom" priority="4">
+	</operation>
+	<operation name="UDP Accept" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Connect" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Disconnect" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Other" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Receive" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Reconnect" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Retransmit" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Send" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP TCPCopy" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UDP Unknown" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UnlockFileAll" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UnlockFileByKey" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="UnlockFileSingle" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="VolumeDismount" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="VolumeMount" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="WriteConfig" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="FASTIO_RELEASE_FOR_SECTION_SYNCHRONIZATION" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="FASTIO_ACQUIRE_FOR_CC_FLUSH" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="FASTIO_RELEASE_FOR_CC_FLUSH" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+	<operation name="IRP_MJ_CLOSE" type="Custom" priority="4">
+		<match index="0"/>
+	</operation>
+</operations>

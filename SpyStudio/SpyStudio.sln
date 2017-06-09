@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpyStudio", "SpyStudio.csproj", "{E3EE9632-9511-4E58-8B0D-04E2457158A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aga.Controls", "Aga.Controls\Aga.Controls.csproj", "{E73BB233-D88B-44A7-A98F-D71EE158381D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wizard.UI", "Wizard.UI\Wizard.UI.csproj", "{80614F74-563D-418E-9BF6-1294F73521C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wizard.Controls", "Wizard.Controls\Wizard.Controls.csproj", "{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release and Code Signing|x64 = Release and Code Signing|x64
+		Release and Code Signing|x86 = Release and Code Signing|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Debug|x64.ActiveCfg = Debug|x64
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Debug|x64.Build.0 = Debug|x64
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Debug|x86.ActiveCfg = Debug|x86
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Debug|x86.Build.0 = Debug|x86
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release and Code Signing|x64.ActiveCfg = Release and Code Signing|x64
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release and Code Signing|x64.Build.0 = Release and Code Signing|x64
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release and Code Signing|x86.ActiveCfg = Release and Code Signing|x86
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release and Code Signing|x86.Build.0 = Release and Code Signing|x86
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release|x64.ActiveCfg = Release|x64
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release|x64.Build.0 = Release|x64
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release|x86.ActiveCfg = Release|x86
+		{E3EE9632-9511-4E58-8B0D-04E2457158A3}.Release|x86.Build.0 = Release|x86
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|x64.ActiveCfg = Debug|x64
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|x64.Build.0 = Debug|x64
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|x86.ActiveCfg = Debug|x86
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|x86.Build.0 = Debug|x86
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release and Code Signing|x64.ActiveCfg = Release and Code Signing|x64
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release and Code Signing|x64.Build.0 = Release and Code Signing|x64
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release and Code Signing|x86.ActiveCfg = Release and Code Signing|x86
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release and Code Signing|x86.Build.0 = Release and Code Signing|x86
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|x64.ActiveCfg = Release|x64
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|x64.Build.0 = Release|x64
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|x86.ActiveCfg = Release|x86
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|x86.Build.0 = Release|x86
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Debug|x64.ActiveCfg = Debug|x64
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Debug|x64.Build.0 = Debug|x64
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Debug|x86.ActiveCfg = Debug|x86
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Debug|x86.Build.0 = Debug|x86
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release and Code Signing|x64.ActiveCfg = Release and Code Signing|x64
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release and Code Signing|x64.Build.0 = Release and Code Signing|x64
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release and Code Signing|x86.ActiveCfg = Release and Code Signing|x86
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release and Code Signing|x86.Build.0 = Release and Code Signing|x86
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release|x64.ActiveCfg = Release|x64
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release|x64.Build.0 = Release|x64
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release|x86.ActiveCfg = Release|x86
+		{80614F74-563D-418E-9BF6-1294F73521C0}.Release|x86.Build.0 = Release|x86
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Debug|x64.ActiveCfg = Debug|x64
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Debug|x64.Build.0 = Debug|x64
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Debug|x86.ActiveCfg = Debug|x86
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Debug|x86.Build.0 = Debug|x86
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release and Code Signing|x64.ActiveCfg = Release and Code Signing|x64
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release and Code Signing|x64.Build.0 = Release and Code Signing|x64
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release and Code Signing|x86.ActiveCfg = Release and Code Signing|x86
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release and Code Signing|x86.Build.0 = Release and Code Signing|x86
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release|x64.ActiveCfg = Release|x64
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release|x64.Build.0 = Release|x64
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release|x86.ActiveCfg = Release|x86
+		{23AD43FF-38F2-4FEC-9FAA-D7B2FA54492B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

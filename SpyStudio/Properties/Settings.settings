@@ -1,0 +1,247 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpyStudio.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MaxStackTraceDepth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">32</Value>
+    </Setting>
+    <Setting Name="FileSystemUpdateInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3500</Value>
+    </Setting>
+    <Setting Name="RegistryUpdateInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2200</Value>
+    </Setting>
+    <Setting Name="TraceUpdateInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="ShowTooltip" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MaxTooltipModules" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="ComUpdateInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="AppName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SpyStudio</Value>
+    </Setting>
+    <Setting Name="DataInfoUpdateInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5500</Value>
+    </Setting>
+    <Setting Name="RegistryBinarySize" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="FilterFieldsMain" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;ProcessName&lt;/string&gt;
+  &lt;string&gt;Pid&lt;/string&gt;
+  &lt;string&gt;Tid&lt;/string&gt;
+  &lt;string&gt;Caller&lt;/string&gt;
+  &lt;string&gt;Function&lt;/string&gt;
+  &lt;string&gt;ParamMain&lt;/string&gt;
+  &lt;string&gt;ParamDetails&lt;/string&gt;
+  &lt;string&gt;Result&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FilterFieldsCompare" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;ProcessName&lt;/string&gt;
+  &lt;string&gt;Caller&lt;/string&gt;
+  &lt;string&gt;StackFrame&lt;/string&gt;
+  &lt;string&gt;Function&lt;/string&gt;
+  &lt;string&gt;ParamMain&lt;/string&gt;
+  &lt;string&gt;ParamDetails&lt;/string&gt;
+  &lt;string&gt;Result&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FilterMain" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FilterCompare" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ShowUINTAsHex" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ActiveHookGroups" Type="System.String" Scope="User">
+      <Value Profile="(Default)">activex,process,registry,windows creation,files,resources,common dialogs,exceptions</Value>
+    </Setting>
+    <Setting Name="ExportRegistryOnlyFromSelectedModules" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DataModelConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=|DataDirectory|\DataModel.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=|DataDirectory|\DataModel.sdf</Value>
+    </Setting>
+    <Setting Name="FilterMainDefault" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;filters&gt;
+    &lt;filter type="contains" include="False"&gt;
+        &lt;type&gt;contains&lt;/type&gt;
+        &lt;include&gt;false&lt;/include&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;field&gt;ParamMain&lt;/field&gt;
+        &lt;value&gt;uxtheme.dll&lt;/value&gt;
+    &lt;/filter&gt;
+&lt;/filters&gt;</Value>
+    </Setting>
+    <Setting Name="FilterCompareDefault" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;filters&gt;
+    &lt;filter type="contains" include="False"&gt;
+        &lt;type&gt;contains&lt;/type&gt;
+        &lt;include&gt;false&lt;/include&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;field&gt;ParamMain&lt;/field&gt;
+        &lt;value&gt;uxtheme.dll&lt;/value&gt;
+    &lt;/filter&gt;
+    &lt;filter type="is" include="False"&gt;
+        &lt;type&gt;Is&lt;/type&gt;
+        &lt;include&gt;false&lt;/include&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;field&gt;Caller&lt;/field&gt;
+        &lt;value&gt;nt0_dll.dll&lt;/value&gt;
+    &lt;/filter&gt;
+&lt;/filters&gt;</Value>
+    </Setting>
+    <Setting Name="MinStackTraceDepth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="ReportInternetReadFileBuffers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FilterKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastExecutePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DlgPeep" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LastExecuteParameters" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ProcMonLoadKernelCalls" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ProcMonShowKernelStack" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FileSystemMergeLayerPaths" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FilterCompareLoadDefault" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;filters&gt;
+    &lt;filter type="contains" include="False"&gt;
+        &lt;type&gt;contains&lt;/type&gt;
+        &lt;include&gt;false&lt;/include&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;field&gt;ParamMain&lt;/field&gt;
+        &lt;value&gt;uxtheme.dll&lt;/value&gt;
+    &lt;/filter&gt;
+    &lt;filter type="is" include="False"&gt;
+        &lt;type&gt;is&lt;/type&gt;
+        &lt;include&gt;false&lt;/include&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;field&gt;Caller&lt;/field&gt;
+        &lt;value&gt;nt0_dll.dll&lt;/value&gt;
+    &lt;/filter&gt;
+&lt;/filters&gt;</Value>
+    </Setting>
+    <Setting Name="FilterMainLoadDefault" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;filters&gt;
+    &lt;filter type="contains" include="False"&gt;
+        &lt;type&gt;contains&lt;/type&gt;
+        &lt;include&gt;false&lt;/include&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;field&gt;ParamMain&lt;/field&gt;
+        &lt;value&gt;uxtheme.dll&lt;/value&gt;
+    &lt;/filter&gt;
+&lt;/filters&gt;</Value>
+    </Setting>
+    <Setting Name="FilterMainLoad" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FilterCompareLoad" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FileSystemShowTree" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FileSystemHideQueryAttributes" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FileSystemMergeLayerPathsCompare" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UpgradeRequired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RunAsUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RunAsPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FileSystemMergeWowPaths" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FileSystemMergeWowPathsCompare" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FileSystemShowStartupModules" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FileSystemShowStartupModulesCompare" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FileSystemHideQueryAttributesCompare" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PathLastSelectedAppFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PathLastSelectedLogFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PathLastSelectedTemplateFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AsyncReg" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RegistryMergeWowPaths" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RegistryMergeClassPaths" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UIUpdateInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="LastDefaultLoadExtension" Type="System.String" Scope="User">
+      <Value Profile="(Default)">spy</Value>
+    </Setting>
+    <Setting Name="FullStackInfo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonitorDotNetGc" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MonitorDotNetJit" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MonitorDotNetExceptions" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MonitorDotNetObjectAllocations" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
